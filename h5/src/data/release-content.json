@@ -1,0 +1,1887 @@
+{
+  "app": {
+    "name": "双星耀世看展助手",
+    "shortName": "古蜀看展",
+    "version": "0.1.0",
+    "contentDate": "2026-05-09",
+    "positioning": "面向国博现场观展的轻量导览小程序，优先解决快速理解、视频离线缓存、展品浏览和神话延伸阅读。"
+  },
+  "guide": {
+    "exhibition": "双星耀世：三星堆·金沙古蜀文明展",
+    "venue": "中国国家博物馆 南8、南9展厅",
+    "curatorialGoal": "通过三星堆遗址与金沙遗址的重要考古发现，呈现古蜀文明的独特面貌，以及其与中华文明多元一体格局之间的关系。",
+    "officialLinks": [
+      {
+        "label": "国博/文旅部展览说明",
+        "url": "https://www.mct.gov.cn/preview/whzx/zsdw/zggjbwg/202601/t20260109_964051.html"
+      },
+      {
+        "label": "国博专题页",
+        "url": "https://www.chnmuseum.cn/portals/0/web/zt/202601shxysh/"
+      },
+      {
+        "label": "央视展览报道",
+        "url": "https://yangbo.cctv.com/2026/01/19/ARTI9tfTeuutpC4tqvtqHSCK260119.shtml"
+      }
+    ],
+    "prologueThemes": [
+      {
+        "title": "惊世秘藏",
+        "goal": "从发现历程和重点器物切入，让用户知道古蜀文明为何“惊世”。",
+        "entrySegments": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "title": "人神共舞",
+        "goal": "通过青铜头像、面具、立人、神坛，理解古蜀人如何塑造人神形象。",
+        "entrySegments": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      {
+        "title": "崇祀天地",
+        "goal": "围绕太阳、鸟、神树、龙蛇和祭祀器物，理解古蜀信仰系统。",
+        "entrySegments": [
+          12,
+          13,
+          14,
+          15,
+          24,
+          25,
+          26
+        ]
+      },
+      {
+        "title": "互融共鉴",
+        "goal": "通过陶器、玉器、青铜礼器和金沙金器，理解古蜀与更大文明网络的交流。",
+        "entrySegments": [
+          11,
+          21,
+          22,
+          23,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ]
+      }
+    ]
+  },
+  "cachePolicy": {
+    "strategy": "进入展厅前或进入小程序首页后，提示用户一键缓存核心视频切片；现场播放优先使用本地缓存，失败后回退到在线播放。",
+    "recommendedBatching": "按看展顺序分批缓存。首批缓存 1-10 段，用户开始观看后后台继续缓存后续段落。",
+    "networkWarning": "若国博馆内网络较弱，界面显示“正在使用本地缓存/正在排队下载/网络不足，稍后自动重试”，避免用户误认为功能故障。",
+    "storageWarning": "精修视频总量约 565MB。微信小程序端需根据当前基础库与设备空间实测容量，必要时提供“仅缓存核心段/清理缓存/继续在线播放”选项。",
+    "states": [
+      "not_cached",
+      "queued",
+      "downloading",
+      "cached",
+      "failed_network",
+      "failed_storage",
+      "using_online_fallback"
+    ]
+  },
+  "browseIndex": [
+    {
+      "id": 1,
+      "title": "金沙金面具与古蜀神圣面孔",
+      "timecode": "00:03:20-00:04:10",
+      "order": 1,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/01.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/01-金沙金面具与古蜀神圣面孔.mp4",
+      "artifacts": [
+        "金沙遗址金面具"
+      ],
+      "description": "从金沙遗址金面具切入古蜀黄金面具传统，含展柜、面具整体与局部近景。",
+      "guideScript": "视频从金沙金面具切入，重点不是“这张脸像谁”，而是古蜀人为什么要把脸做成黄金。看展时可以先看眼眶、鼻梁和口部处理：它削弱了日常表情，却放大了庄重感。再把它和三星堆青铜面具、金面罩放在一起想，你会发现古蜀人一直在处理同一个问题：怎样让一张脸从普通人变成仪式中的神圣面孔。",
+      "appUse": "适合做“神圣面孔”第一张导览卡。",
+      "cacheKey": "official-segment-01",
+      "hasExtensionReading": true,
+      "artifactsText": "金沙遗址金面具",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/01-金沙金面具与古蜀神圣面孔.mp4",
+      "viewingGuide": "视频从金沙金面具切入，重点不是“这张脸像谁”，而是古蜀人为什么要把脸做成黄金。看展时可以先看眼眶、鼻梁和口部处理：它削弱了日常表情，却放大了庄重感。再把它和三星堆青铜面具、金面罩放在一起想，你会发现古蜀人一直在处理同一个问题：怎样让一张脸从普通人变成仪式中的神圣面孔。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "眼眶、鼻梁、口部处理，以及黄金表面对表情的“压平”效果。"
+        },
+        {
+          "label": "可以对比",
+          "text": "金沙金面具偏向用黄金压缩神圣身份；三星堆青铜面具更强调夸张造型和视觉冲击。"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "金沙金冠带与鱼鸟箭纹",
+      "timecode": "00:04:10-00:05:00",
+      "order": 2,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/02.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/02-金沙金冠带与鱼鸟箭纹.mp4",
+      "artifacts": [
+        "金沙金冠带",
+        "鱼鸟箭纹"
+      ],
+      "description": "金冠带近景、鱼鸟箭纹细节和主持人讲解，完整保留该器物段落收尾。",
+      "guideScript": "这一段看金沙金冠带，不要只停在“金器很贵重”。真正值得看的是鱼、鸟、箭和人面怎样排成一组图像。鱼让人想到水域，鸟指向天空和太阳，箭带出力量与威慑，人面则像身份的核心标记。它更像一条可以佩戴的权力说明书，而不是普通装饰。",
+      "appUse": "适合做纹样点击互动。",
+      "cacheKey": "official-segment-02",
+      "hasExtensionReading": true,
+      "artifactsText": "金沙金冠带、鱼鸟箭纹",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/02-金沙金冠带与鱼鸟箭纹.mp4",
+      "viewingGuide": "这一段看金沙金冠带，不要只停在“金器很贵重”。真正值得看的是鱼、鸟、箭和人面怎样排成一组图像。鱼让人想到水域，鸟指向天空和太阳，箭带出力量与威慑，人面则像身份的核心标记。它更像一条可以佩戴的权力说明书，而不是普通装饰。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "鱼、鸟、箭、人面四类纹样分别出现在哪里。"
+        },
+        {
+          "label": "可以对比",
+          "text": "和金面具对比：一个处理“神圣的脸”，一个处理“身份的纹样”。"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "金沙发现大事记、三星堆发现历程与青铜大立人",
+      "timecode": "00:05:00-00:08:40",
+      "order": 3,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/03.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/03-金沙发现大事记-三星堆发现历程与青铜大立人.mp4",
+      "artifacts": [
+        "金沙遗址考古大事记",
+        "三星堆发现历程展板",
+        "青铜大立人"
+      ],
+      "description": "补入原先缺失的金沙遗址考古大事记，并衔接三星堆发现历程、青铜大立人整体、手势和衣饰细节。",
+      "guideScript": "视频把金沙和三星堆的发现线索接到青铜大立人身上。看大立人时，最值得停留的是双手之间那个空位：它像曾经握着某种重要东西，但实物没有留下。冠饰、宽袍、足下座和双手动作共同说明，它不是普通人物，而是被放进祭祀秩序里的核心角色。",
+      "appUse": "适合做发现时间轴和“大立人手持物猜想”。",
+      "cacheKey": "official-segment-03",
+      "hasExtensionReading": true,
+      "artifactsText": "金沙遗址考古大事记、三星堆发现历程展板、青铜大立人",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/03-金沙发现大事记-三星堆发现历程与青铜大立人.mp4",
+      "viewingGuide": "视频把金沙和三星堆的发现线索接到青铜大立人身上。看大立人时，最值得停留的是双手之间那个空位：它像曾经握着某种重要东西，但实物没有留下。冠饰、宽袍、足下座和双手动作共同说明，它不是普通人物，而是被放进祭祀秩序里的核心角色。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "双手环握姿态、冠饰、衣纹和足下座。"
+        },
+        {
+          "label": "想一想",
+          "text": "手中曾经是否有持物？如果有，它可能是在显示权力，还是完成祭祀？"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "三星堆古城格局、金沙遗址模型与古蜀空间",
+      "timecode": "00:08:40-00:11:10",
+      "order": 4,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/04.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/04-三星堆古城格局-金沙遗址模型与古蜀空间.mp4",
+      "artifacts": [
+        "三星堆遗址模型",
+        "金沙遗址模型",
+        "古城格局展项"
+      ],
+      "description": "展示三星堆古城、金沙遗址空间模型和古蜀都邑地理关系，保留模型推演段落。",
+      "guideScript": "这一段不是看单件文物，而是把三星堆和金沙放回空间里。模型里的城墙、河流、祭祀区和生活区，能提醒我们：这些器物不是孤零零出现的宝物，它们背后有城市、有资源、有真实生活的人群。",
+      "appUse": "适合做古蜀地图探索页。",
+      "cacheKey": "official-segment-04",
+      "hasExtensionReading": false,
+      "artifactsText": "三星堆遗址模型、金沙遗址模型、古城格局展项",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/04-三星堆古城格局-金沙遗址模型与古蜀空间.mp4",
+      "viewingGuide": "这一段不是看单件文物，而是把三星堆和金沙放回空间里。模型里的城墙、河流、祭祀区和生活区，能提醒我们：这些器物不是孤零零出现的宝物，它们背后有城市、有资源、有真实生活的人群。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "城墙、河道、祭祀区和生活区之间的位置关系。"
+        },
+        {
+          "label": "可以对比",
+          "text": "回看展柜中的金器、青铜器、陶器，它们都应放回古蜀都邑空间里理解。"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "三星堆金沙文化对比与人像面具序章",
+      "timecode": "00:11:10-00:12:40",
+      "order": 5,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/05.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/05-三星堆金沙文化对比与人像面具序章.mp4",
+      "artifacts": [
+        "文化汇流展板",
+        "器物对照展板",
+        "青铜人头像序章"
+      ],
+      "description": "文化元素对照展板、金器玉器青铜器比较，并过渡到青铜头像和面具主题。",
+      "guideScript": "视频通过展板把三星堆、金沙和更大范围的文化因素放在一起。这里适合快速建立一个判断：古蜀文明不是封闭孤岛。金器、玉器、青铜器、动物纹和人像造型，都说明它既有本地独特想象，也不断吸收和改造外来观念。",
+      "appUse": "适合做“多元交流”过渡卡。",
+      "cacheKey": "official-segment-05",
+      "hasExtensionReading": false,
+      "artifactsText": "文化汇流展板、器物对照展板、青铜人头像序章",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/05-三星堆金沙文化对比与人像面具序章.mp4",
+      "viewingGuide": "视频通过展板把三星堆、金沙和更大范围的文化因素放在一起。这里适合快速建立一个判断：古蜀文明不是封闭孤岛。金器、玉器、青铜器、动物纹和人像造型，都说明它既有本地独特想象，也不断吸收和改造外来观念。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "展板里不同材料和图像类型的并置关系。"
+        },
+        {
+          "label": "可以对比",
+          "text": "三星堆青铜人像的强烈造型，与金沙金器、玉器更精细的表达。"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "青铜人头像、戴面具头像与面具结构",
+      "timecode": "00:12:40-00:14:10",
+      "order": 6,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/06.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/06-青铜人头像-戴面具头像与面具结构.mp4",
+      "artifacts": [
+        "青铜人头像",
+        "戴面具青铜头像",
+        "面具结构细节"
+      ],
+      "description": "青铜人头像与戴面具头像对照，展示侧面、头部开口、冠饰和面具结构细节。",
+      "guideScript": "这一段适合练习分辨“头像”和“面具”。正面看它们都很夸张，但侧面、头部开口、冠饰和面具边缘会透露不同功能。古蜀人不是不会做人像，而是在把人脸一步步推向仪式化的脸。",
+      "appUse": "适合做头像对比滑块。",
+      "cacheKey": "official-segment-06",
+      "hasExtensionReading": false,
+      "artifactsText": "青铜人头像、戴面具青铜头像、面具结构细节",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/06-青铜人头像-戴面具头像与面具结构.mp4",
+      "viewingGuide": "这一段适合练习分辨“头像”和“面具”。正面看它们都很夸张，但侧面、头部开口、冠饰和面具边缘会透露不同功能。古蜀人不是不会做人像，而是在把人脸一步步推向仪式化的脸。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "侧面轮廓、头部开口、嘴下结构和冠饰细节。"
+        },
+        {
+          "label": "可以对比",
+          "text": "普通青铜头像仍保留人群形象，后面的纵目面具则更接近神圣异相。"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "青铜纵目面具与夸张眼耳造型",
+      "timecode": "00:14:10-00:15:30",
+      "order": 7,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/07.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/07-青铜纵目面具与夸张眼耳造型.mp4",
+      "artifacts": [
+        "青铜纵目面具"
+      ],
+      "description": "纵目面具整体、眼部、耳部和展柜讲解，完整覆盖纵目造型段落。",
+      "guideScript": "纵目面具的重点不是“怪”，而是眼睛和耳朵被有意放大。眼睛向前凸出，耳朵向两侧展开，这不是写实，而是在表达超常的观看和聆听能力。看它时不要只问像不像人，更要问：古蜀人希望这个形象替他们看见什么、听见什么。",
+      "appUse": "适合做蚕丛说、烛龙说、祖先神说多解释卡。",
+      "cacheKey": "official-segment-07",
+      "hasExtensionReading": true,
+      "artifactsText": "青铜纵目面具",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/07-青铜纵目面具与夸张眼耳造型.mp4",
+      "viewingGuide": "纵目面具的重点不是“怪”，而是眼睛和耳朵被有意放大。眼睛向前凸出，耳朵向两侧展开，这不是写实，而是在表达超常的观看和聆听能力。看它时不要只问像不像人，更要问：古蜀人希望这个形象替他们看见什么、听见什么。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "外凸的双眼、展开的双耳，以及面具整体的正面压迫感。"
+        },
+        {
+          "label": "传说线索",
+          "text": "蚕丛“其目纵”和《山海经》烛龙直目都可作为理解入口，但不是定论。"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "青铜顶尊跪坐人像与顶尊献礼姿态",
+      "timecode": "00:15:30-00:16:40",
+      "order": 8,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/08.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/08-青铜顶尊跪坐人像与顶尊献礼姿态.mp4",
+      "artifacts": [
+        "青铜顶尊跪坐人像"
+      ],
+      "description": "顶尊跪坐人像整体、顶尊、身体姿态和主持人讲解。",
+      "guideScript": "青铜顶尊跪坐人像把身体姿态和礼器结合在一起。先看跪坐，再看头顶的尊形器：人物的身体像是成为了承托神圣器物的一部分。这件器物的重点不在“人物是谁”，而在“身体如何进入献礼动作”。",
+      "appUse": "适合做托举献礼动作动效。",
+      "cacheKey": "official-segment-08",
+      "hasExtensionReading": false,
+      "artifactsText": "青铜顶尊跪坐人像",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/08-青铜顶尊跪坐人像与顶尊献礼姿态.mp4",
+      "viewingGuide": "青铜顶尊跪坐人像把身体姿态和礼器结合在一起。先看跪坐，再看头顶的尊形器：人物的身体像是成为了承托神圣器物的一部分。这件器物的重点不在“人物是谁”，而在“身体如何进入献礼动作”。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "跪坐姿态、头顶尊形器和身体承托关系。"
+        },
+        {
+          "label": "可以对比",
+          "text": "和青铜大立人对比：一个以站立和双手形成中心，一个以跪坐和承托表现献礼。"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "青铜立人小像与器座人物",
+      "timecode": "00:16:40-00:17:20",
+      "order": 9,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/09.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/09-青铜立人小像与器座人物.mp4",
+      "artifacts": [
+        "青铜立人小像",
+        "青铜器座构件"
+      ],
+      "description": "小型青铜立人像、人物手势、器座与同柜构件展示。",
+      "guideScript": "小型青铜立人像没有大立人那样震撼，但它能补足古蜀仪式中的“角色群像”。看它们的手势、站姿、冠饰和器座关系，会发现小件也同样被仪式秩序塑造。",
+      "appUse": "适合做祭祀角色卡。",
+      "cacheKey": "official-segment-09",
+      "hasExtensionReading": false,
+      "artifactsText": "青铜立人小像、青铜器座构件",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/09-青铜立人小像与器座人物.mp4",
+      "viewingGuide": "小型青铜立人像没有大立人那样震撼，但它能补足古蜀仪式中的“角色群像”。看它们的手势、站姿、冠饰和器座关系，会发现小件也同样被仪式秩序塑造。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "手势、站姿、冠饰和器座连接方式。"
+        },
+        {
+          "label": "可以对比",
+          "text": "大立人像仪式中心，小立人更像不同角色的补充。"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "青铜神坛构件与祭祀场景",
+      "timecode": "00:17:20-00:18:30",
+      "order": 10,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/10.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/10-青铜神坛构件与祭祀场景.mp4",
+      "artifacts": [
+        "青铜神坛构件",
+        "祭祀场景展项"
+      ],
+      "description": "青铜神坛、器座、动物构件和祭祀空间说明，保留转场前收束。",
+      "guideScript": "青铜神坛构件会让人一开始觉得信息很多。观看时先不要急着认每个部件，可以先看人物、动物、器座和建筑式结构怎样组合成一套场景。它提示我们，古蜀祭祀不是靠单件器物完成，而是一整套图像系统。",
+      "appUse": "适合做神坛分层点读。",
+      "cacheKey": "official-segment-10",
+      "hasExtensionReading": false,
+      "artifactsText": "青铜神坛构件、祭祀场景展项",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/10-青铜神坛构件与祭祀场景.mp4",
+      "viewingGuide": "青铜神坛构件会让人一开始觉得信息很多。观看时先不要急着认每个部件，可以先看人物、动物、器座和建筑式结构怎样组合成一套场景。它提示我们，古蜀祭祀不是靠单件器物完成，而是一整套图像系统。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "人物、动物、器座和建筑式结构之间的层次。"
+        },
+        {
+          "label": "可以对比",
+          "text": "单件人像强调角色，神坛构件强调场景和系统。"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "陶器组合、陶高柄器与日用器",
+      "timecode": "00:18:30-00:20:40",
+      "order": 11,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/11.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/11-陶器组合-陶高柄器与日用器.mp4",
+      "artifacts": [
+        "陶高柄器",
+        "陶杯形器",
+        "陶盉",
+        "日用陶器组合"
+      ],
+      "description": "从展厅转场进入陶器展柜，展示陶高柄器、杯形器、陶盉等生活器组合。",
+      "guideScript": "看完金器和青铜器，这一段回到陶器。陶高柄器、杯形器、陶盉等器物不负责制造神秘感，而是把古蜀人的饮食、盛放、加热和日常使用带回现场。一个文明不能只有祭祀，也必须有日常生活。",
+      "appUse": "适合做生活器使用场景卡。",
+      "cacheKey": "official-segment-11",
+      "hasExtensionReading": false,
+      "artifactsText": "陶高柄器、陶杯形器、陶盉、日用陶器组合",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/11-陶器组合-陶高柄器与日用器.mp4",
+      "viewingGuide": "看完金器和青铜器，这一段回到陶器。陶高柄器、杯形器、陶盉等器物不负责制造神秘感，而是把古蜀人的饮食、盛放、加热和日常使用带回现场。一个文明不能只有祭祀，也必须有日常生活。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "陶器的口沿、足部、器身和可能的使用方式。"
+        },
+        {
+          "label": "可以对比",
+          "text": "金器、青铜器偏向神圣与权力；陶器提供生活证据。"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "象牙、玉石环形器与牙璋",
+      "timecode": "00:20:40-00:22:30",
+      "order": 12,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/12.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/12-象牙-玉石环形器与牙璋.mp4",
+      "artifacts": [
+        "象牙",
+        "玉石环形器",
+        "牙璋",
+        "玉石小件"
+      ],
+      "description": "象牙、玉石环形器、牙璋与小件玉器段落，完整保留到太阳主题转场。",
+      "guideScript": "象牙和玉器把观看重点从造型转向材料。象牙体量大，说明祭祀中有珍贵资源投入；玉石环形器、牙璋和小件玉器，则把礼仪、身份和区域交流联系起来。看这些器物时，材质本身就是信息。",
+      "appUse": "适合做资源流动地图。",
+      "cacheKey": "official-segment-12",
+      "hasExtensionReading": false,
+      "artifactsText": "象牙、玉石环形器、牙璋、玉石小件",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/12-象牙-玉石环形器与牙璋.mp4",
+      "viewingGuide": "象牙和玉器把观看重点从造型转向材料。象牙体量大，说明祭祀中有珍贵资源投入；玉石环形器、牙璋和小件玉器，则把礼仪、身份和区域交流联系起来。看这些器物时，材质本身就是信息。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "象牙体量、玉器孔洞、刃形、打磨和边缘处理。"
+        },
+        {
+          "label": "可以对比",
+          "text": "陶器接近日常，象牙和玉器更接近礼仪与身份表达。"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "青铜太阳形器与太阳崇拜",
+      "timecode": "00:22:30-00:23:30",
+      "order": 13,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/13.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/13-青铜太阳形器与太阳崇拜.mp4",
+      "artifacts": [
+        "青铜太阳形器"
+      ],
+      "description": "太阳形青铜器整体、轮辐、中心圆凸和太阳崇拜主题介绍。",
+      "guideScript": "青铜太阳形器容易被看成“方向盘”，但视频真正要带你看的，是古蜀人怎样把天上的太阳变成可观看的器物。圆形、轮辐和中心凸起共同构成太阳图像，也把太阳从自然现象转化为仪式符号。",
+      "appUse": "适合做太阳轮旋转动效。",
+      "cacheKey": "official-segment-13",
+      "hasExtensionReading": true,
+      "artifactsText": "青铜太阳形器",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/13-青铜太阳形器与太阳崇拜.mp4",
+      "viewingGuide": "青铜太阳形器容易被看成“方向盘”，但视频真正要带你看的，是古蜀人怎样把天上的太阳变成可观看的器物。圆形、轮辐和中心凸起共同构成太阳图像，也把太阳从自然现象转化为仪式符号。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "圆形轮廓、轮辐、中心凸起和整体放射感。"
+        },
+        {
+          "label": "可以对比",
+          "text": "后面的太阳神鸟用黄金表现太阳与鸟的循环，两者共享太阳崇拜线索。"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "太阳神鸟、鸟形器与小型金器",
+      "timecode": "00:23:30-00:25:30",
+      "order": 14,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/14.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/14-太阳神鸟-鸟形器与小型金器.mp4",
+      "artifacts": [
+        "太阳神鸟金饰",
+        "鸟形器",
+        "鸟形青铜器",
+        "小型金器"
+      ],
+      "description": "太阳神鸟、鸟形青铜器、鸟形小件和相关金器，补足原段后半的图像资料。",
+      "guideScript": "太阳神鸟金饰最值得看的是“动势”。外层鸟围绕中心，内层光芒形成旋转感，像把太阳运行和时间循环压进一片黄金。旁边的鸟形器和小型金器，则补充了古蜀鸟崇拜的图像背景。",
+      "appUse": "适合做四鸟绕日互动转盘。",
+      "cacheKey": "official-segment-14",
+      "hasExtensionReading": true,
+      "artifactsText": "太阳神鸟金饰、鸟形器、鸟形青铜器、小型金器",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/14-太阳神鸟-鸟形器与小型金器.mp4",
+      "viewingGuide": "太阳神鸟金饰最值得看的是“动势”。外层鸟围绕中心，内层光芒形成旋转感，像把太阳运行和时间循环压进一片黄金。旁边的鸟形器和小型金器，则补充了古蜀鸟崇拜的图像背景。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "四鸟环绕、内层光芒和整体旋转感。"
+        },
+        {
+          "label": "可以对比",
+          "text": "青铜太阳形器像太阳图标，太阳神鸟更像太阳运行图；再往后可和青铜神树联系。"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "龙柱形青铜器、蛇形器与鸟蛇造型",
+      "timecode": "00:25:30-00:27:10",
+      "order": 15,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/15.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/15-龙柱形青铜器-蛇形器与鸟蛇造型.mp4",
+      "artifacts": [
+        "龙柱形青铜器",
+        "蛇形器",
+        "鸟形构件"
+      ],
+      "description": "龙柱形青铜器、蛇形器、鸟形构件和神话动物造型说明。",
+      "guideScript": "龙柱形器、蛇形器和鸟形构件不适合按动物园方式观看。这里更重要的是分工：鸟把视线带向天空和太阳，蛇龙带来盘绕、地脉和神力感，柱状结构强调上下连接。",
+      "appUse": "适合做鸟、蛇、龙元素拆解。",
+      "cacheKey": "official-segment-15",
+      "hasExtensionReading": true,
+      "artifactsText": "龙柱形青铜器、蛇形器、鸟形构件",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/15-龙柱形青铜器-蛇形器与鸟蛇造型.mp4",
+      "viewingGuide": "龙柱形器、蛇形器和鸟形构件不适合按动物园方式观看。这里更重要的是分工：鸟把视线带向天空和太阳，蛇龙带来盘绕、地脉和神力感，柱状结构强调上下连接。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "鸟、蛇、龙、柱状结构分别承担什么视觉作用。"
+        },
+        {
+          "label": "传说线索",
+          "text": "可联想到《山海经》烛龙、人面蛇身等母题，但不要直接定名。"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "虎形纹样、金饰与金沙动物纹",
+      "timecode": "00:27:10-00:28:10",
+      "order": 16,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/16.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/16-虎形纹样-金饰与金沙动物纹.mp4",
+      "artifacts": [
+        "虎形纹样",
+        "金饰",
+        "小件金器"
+      ],
+      "description": "虎形纹样、金饰、小件金器与金沙动物纹样组合。",
+      "guideScript": "虎形纹样和金沙动物纹，适合看古蜀人如何把动物力量变成装饰语言。虎不只是动物形象，它可能带出山林、威慑、守护等意义。金器上的动物纹样，也是在用图像表达身份和信仰。",
+      "appUse": "适合做动物纹识别小游戏。",
+      "cacheKey": "official-segment-16",
+      "hasExtensionReading": false,
+      "artifactsText": "虎形纹样、金饰、小件金器",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/16-虎形纹样-金饰与金沙动物纹.mp4",
+      "viewingGuide": "虎形纹样和金沙动物纹，适合看古蜀人如何把动物力量变成装饰语言。虎不只是动物形象，它可能带出山林、威慑、守护等意义。金器上的动物纹样，也是在用图像表达身份和信仰。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "虎形纹样的位置、线条和与其他动物纹的组合。"
+        },
+        {
+          "label": "可以对比",
+          "text": "金冠带用鱼鸟箭人面组成完整符号，这里更强调动物力量的压缩。"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "兽首冠青铜立人像与人神造型",
+      "timecode": "00:28:10-00:30:00",
+      "order": 17,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/17.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/17-兽首冠青铜立人像与人神造型.mp4",
+      "artifacts": [
+        "兽首冠青铜立人像",
+        "青铜立人像"
+      ],
+      "description": "兽首冠小型立人像、手势、冠饰、身体比例和人神造型细节。",
+      "guideScript": "兽首冠青铜立人像的观看重点在“人如何被装束改变”。身体是人的，冠饰、手势和比例却把它推向仪式角色。兽首冠不是普通装饰，而像是把动物力量戴在头上。",
+      "appUse": "适合做冠饰和手势热点。",
+      "cacheKey": "official-segment-17",
+      "hasExtensionReading": true,
+      "artifactsText": "兽首冠青铜立人像、青铜立人像",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/17-兽首冠青铜立人像与人神造型.mp4",
+      "viewingGuide": "兽首冠青铜立人像的观看重点在“人如何被装束改变”。身体是人的，冠饰、手势和比例却把它推向仪式角色。兽首冠不是普通装饰，而像是把动物力量戴在头上。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "兽首冠、手势、面部和身体比例。"
+        },
+        {
+          "label": "可以对比",
+          "text": "和青铜大立人对比：一个宏大，一个精巧，但都不是普通肖像。"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "跪坐人物、顶尊人物与神坛过渡",
+      "timecode": "00:30:00-00:31:30",
+      "order": 18,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/18.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/18-跪坐人物-顶尊人物与神坛过渡.mp4",
+      "artifacts": [
+        "跪坐人物",
+        "顶尊人物",
+        "神坛图像展板"
+      ],
+      "description": "顶尊跪坐人物、跪坐姿态、神坛图像展板和向大型神坛的过渡。",
+      "guideScript": "跪坐人物和神坛图像展板，是从单个人物过渡到完整祭祀场面的桥梁。先看跪坐姿态，再看所托之物和所在位置，你会发现身体动作本身就是礼仪秩序的一部分。",
+      "appUse": "适合做动作识别卡。",
+      "cacheKey": "official-segment-18",
+      "hasExtensionReading": false,
+      "artifactsText": "跪坐人物、顶尊人物、神坛图像展板",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/18-跪坐人物-顶尊人物与神坛过渡.mp4",
+      "viewingGuide": "跪坐人物和神坛图像展板，是从单个人物过渡到完整祭祀场面的桥梁。先看跪坐姿态，再看所托之物和所在位置，你会发现身体动作本身就是礼仪秩序的一部分。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "跪坐姿态、托举关系和神坛图像中的位置。"
+        },
+        {
+          "label": "可以对比",
+          "text": "把单个跪坐动作放到大型神坛里看，会更容易理解祭祀场景。"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "大型青铜神坛组合与人兽建筑图像",
+      "timecode": "00:31:30-00:34:50",
+      "order": 19,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/19.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/19-大型青铜神坛组合与人兽建筑图像.mp4",
+      "artifacts": [
+        "大型青铜神坛",
+        "神坛人物",
+        "神坛动物构件",
+        "建筑式构件"
+      ],
+      "description": "大型青铜神坛整体、人物、动物、建筑结构和多层祭祀图像细节。",
+      "guideScript": "大型青铜神坛信息量很高，观看时先看整体，再逐层看人物、动物、建筑式构件和上部结构。它像一张立体的祭祀图，重点不是立刻认出每个细节，而是感受古蜀祭祀图像的层次。",
+      "appUse": "适合做神坛纵向分层长图。",
+      "cacheKey": "official-segment-19",
+      "hasExtensionReading": true,
+      "artifactsText": "大型青铜神坛、神坛人物、神坛动物构件、建筑式构件",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/19-大型青铜神坛组合与人兽建筑图像.mp4",
+      "viewingGuide": "大型青铜神坛信息量很高，观看时先看整体，再逐层看人物、动物、建筑式构件和上部结构。它像一张立体的祭祀图，重点不是立刻认出每个细节，而是感受古蜀祭祀图像的层次。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "整体轮廓、人物层、动物层、建筑式结构和上部构件。"
+        },
+        {
+          "label": "可以对比",
+          "text": "前面的小人像是角色，神坛则是一套场景系统。"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "青铜大立人展柜、服饰与祭祀姿态",
+      "timecode": "00:34:50-00:36:10",
+      "order": 20,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/20.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/20-青铜大立人展柜-服饰与祭祀姿态.mp4",
+      "artifacts": [
+        "青铜大立人",
+        "服饰纹样",
+        "手势细节"
+      ],
+      "description": "回到青铜大立人展柜，展示整体、服饰纹样、手势和祭祀姿态。",
+      "guideScript": "再次回到青铜大立人时，观看重点从“发现和悬念”转到细节。衣纹、冠饰、足部、双手姿态和身体比例，都在帮助塑造它的祭祀中心身份。",
+      "appUse": "适合做大立人四热点：冠、衣、手、足座。",
+      "cacheKey": "official-segment-20",
+      "hasExtensionReading": false,
+      "artifactsText": "青铜大立人、服饰纹样、手势细节",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/20-青铜大立人展柜-服饰与祭祀姿态.mp4",
+      "viewingGuide": "再次回到青铜大立人时，观看重点从“发现和悬念”转到细节。衣纹、冠饰、足部、双手姿态和身体比例，都在帮助塑造它的祭祀中心身份。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "服饰纹样、冠饰、手势、足下座和整体比例。"
+        },
+        {
+          "label": "可以对比",
+          "text": "和第3段初见大立人对比：前面看悬念，这里看身份如何由细节构成。"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "金面具近景与黄金面部细节",
+      "timecode": "00:36:10-00:36:40",
+      "order": 21,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/21.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/21-金面具近景与黄金面部细节.mp4",
+      "artifacts": [
+        "金面具"
+      ],
+      "description": "金面具整体、眼鼻口局部和黄金质感近景。",
+      "guideScript": "这一段是金面具的近景补充。请把注意力放到黄金表面、眼眶、鼻梁和口部处理上。整体看时它是神圣面孔，近距离看时能看到工艺怎样服务这份神圣感。",
+      "appUse": "适合做短视频循环或图像放大卡。",
+      "cacheKey": "official-segment-21",
+      "hasExtensionReading": false,
+      "artifactsText": "金面具",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/21-金面具近景与黄金面部细节.mp4",
+      "viewingGuide": "这一段是金面具的近景补充。请把注意力放到黄金表面、眼眶、鼻梁和口部处理上。整体看时它是神圣面孔，近距离看时能看到工艺怎样服务这份神圣感。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "黄金表面细节、眼鼻口处理和边缘形态。"
+        },
+        {
+          "label": "可以对比",
+          "text": "和第1段整体观看对比：整体看身份，近景看工艺。"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "青铜尊罍与纹饰细节",
+      "timecode": "00:36:40-00:37:20",
+      "order": 22,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/22.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/22-青铜尊罍与纹饰细节.mp4",
+      "artifacts": [
+        "青铜尊",
+        "青铜罍",
+        "纹饰细节"
+      ],
+      "description": "青铜尊罍类容器、器身纹饰和礼器细节。",
+      "guideScript": "青铜尊罍类容器适合看器型和纹饰。它们不是普通盛器，在祭祀和礼仪场景里，容器承载的是供献、秩序和身份，也提示古蜀与更广阔青铜礼器系统之间的联系。",
+      "appUse": "适合做纹饰放大镜。",
+      "cacheKey": "official-segment-22",
+      "hasExtensionReading": false,
+      "artifactsText": "青铜尊、青铜罍、纹饰细节",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/22-青铜尊罍与纹饰细节.mp4",
+      "viewingGuide": "青铜尊罍类容器适合看器型和纹饰。它们不是普通盛器，在祭祀和礼仪场景里，容器承载的是供献、秩序和身份，也提示古蜀与更广阔青铜礼器系统之间的联系。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "器型比例、器身纹饰、兽面或几何纹细节。"
+        },
+        {
+          "label": "可以对比",
+          "text": "面具和神树偏古蜀本地想象，尊罍更能提示外部礼器传统的影响。"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "青铜神兽、兽形器与复合动物造型",
+      "timecode": "00:37:20-00:38:20",
+      "order": 23,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/23.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/23-青铜神兽-兽形器与复合动物造型.mp4",
+      "artifacts": [
+        "青铜神兽",
+        "兽形器",
+        "复合动物构件"
+      ],
+      "description": "青铜神兽整体、鸟兽组合、头部、身体和复合动物造型。",
+      "guideScript": "青铜神兽不必急着认成某一种动物。先看头部、角、口、爪和身体，它更像多种动物能力的组合。越不像单一动物，越说明它可能服务于守护、祭祀和神话想象。",
+      "appUse": "适合做动物部位拼合识别。",
+      "cacheKey": "official-segment-23",
+      "hasExtensionReading": true,
+      "artifactsText": "青铜神兽、兽形器、复合动物构件",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/23-青铜神兽-兽形器与复合动物造型.mp4",
+      "viewingGuide": "青铜神兽不必急着认成某一种动物。先看头部、角、口、爪和身体，它更像多种动物能力的组合。越不像单一动物，越说明它可能服务于守护、祭祀和神话想象。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "角、耳、口、爪、身体转折和复合动物特征。"
+        },
+        {
+          "label": "可以对比",
+          "text": "龙柱和蛇形器强调通达天地，神兽更强调守护和复合力量。"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "玉环、玉璋与玉礼器纹饰",
+      "timecode": "00:38:20-00:40:00",
+      "order": 24,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/24.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/24-玉环-玉璋与玉礼器纹饰.mp4",
+      "artifacts": [
+        "玉环",
+        "玉璋",
+        "玉礼器"
+      ],
+      "description": "玉环、玉璋、纹饰近景和玉礼器展柜讲解。",
+      "guideScript": "玉环、玉璋和玉礼器的观看节奏要慢一些。重点看孔洞、刃形、边缘、纹饰和打磨痕迹。玉器没有青铜器那样外放，却更适合讲礼制、身份和交流。",
+      "appUse": "适合做玉器材质与纹饰卡。",
+      "cacheKey": "official-segment-24",
+      "hasExtensionReading": false,
+      "artifactsText": "玉环、玉璋、玉礼器",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/24-玉环-玉璋与玉礼器纹饰.mp4",
+      "viewingGuide": "玉环、玉璋和玉礼器的观看节奏要慢一些。重点看孔洞、刃形、边缘、纹饰和打磨痕迹。玉器没有青铜器那样外放，却更适合讲礼制、身份和交流。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "孔洞、刃形、纹饰、打磨和玉质光泽。"
+        },
+        {
+          "label": "可以对比",
+          "text": "看到玉璋不要只想到武器，玉材质会把器物意义推向礼仪。"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "青铜神树整体、枝鸟与龙蛇构件",
+      "timecode": "00:40:00-00:42:30",
+      "order": 25,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/25.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/25-青铜神树整体-枝鸟与龙蛇构件.mp4",
+      "artifacts": [
+        "青铜神树",
+        "枝上立鸟",
+        "龙蛇构件"
+      ],
+      "description": "青铜神树整体、枝干、立鸟、龙蛇构件和太阳崇拜相关讲解。",
+      "guideScript": "青铜神树要先看整体，再看局部。树干、分层枝条、枝上立鸟和龙蛇构件，共同组成一套关于太阳、鸟、龙蛇和上下通道的想象。它不是普通树，而是古蜀人把宇宙结构做成了树的形状。",
+      "appUse": "适合做扶桑十日神话对照动效。",
+      "cacheKey": "official-segment-25",
+      "hasExtensionReading": true,
+      "artifactsText": "青铜神树、枝上立鸟、龙蛇构件",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/25-青铜神树整体-枝鸟与龙蛇构件.mp4",
+      "viewingGuide": "青铜神树要先看整体，再看局部。树干、分层枝条、枝上立鸟和龙蛇构件，共同组成一套关于太阳、鸟、龙蛇和上下通道的想象。它不是普通树，而是古蜀人把宇宙结构做成了树的形状。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "分层枝条、枝上立鸟、树身龙蛇和整体向上的结构。"
+        },
+        {
+          "label": "传说线索",
+          "text": "可与《山海经》扶桑十日、通天神树母题对照，但不能说它就是扶桑。"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "神树构件展板、鸟蛇纹样与衣饰形制解释",
+      "timecode": "00:42:30-00:45:00",
+      "order": 26,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/26.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/26-神树构件展板-鸟蛇纹样与衣饰形制解释.mp4",
+      "artifacts": [
+        "神树构件展板",
+        "鸟蛇纹样",
+        "衣饰形制展板"
+      ],
+      "description": "展板解释青铜神树构件、鸟蛇纹样、青铜人像衣饰形制，并完整保留该知识点收尾。",
+      "guideScript": "这一段知识密度高，适合把神树拆开看。鸟、蛇、树、衣饰纹样并不是孤立出现的，它们在古蜀图像系统里互相呼应：鸟连太阳，蛇龙连神力，树连天地，衣饰把秩序穿到人身上。",
+      "appUse": "适合做展板知识点拆解。",
+      "cacheKey": "official-segment-26",
+      "hasExtensionReading": true,
+      "artifactsText": "神树构件展板、鸟蛇纹样、衣饰形制展板",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/26-神树构件展板-鸟蛇纹样与衣饰形制解释.mp4",
+      "viewingGuide": "这一段知识密度高，适合把神树拆开看。鸟、蛇、树、衣饰纹样并不是孤立出现的，它们在古蜀图像系统里互相呼应：鸟连太阳，蛇龙连神力，树连天地，衣饰把秩序穿到人身上。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "鸟蛇纹样、神树构件和人像衣饰之间的呼应。"
+        },
+        {
+          "label": "可以对比",
+          "text": "神树整体给震撼，构件展板给理解方法。"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "title": "金沙金器组合、金冠带与圆形金器",
+      "timecode": "00:45:00-00:46:20",
+      "order": 27,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/27.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/27-金沙金器组合-金冠带与圆形金器.mp4",
+      "artifacts": [
+        "金冠带",
+        "圆形金器",
+        "金沙金器组合"
+      ],
+      "description": "金沙金器展柜、金冠带、圆形金器和金器组合近景。",
+      "guideScript": "回到金沙金器组合时，可以看金冠带、圆形金器和其他金饰怎样用轻薄材料表达信仰。相比三星堆青铜器的体量和造型，金沙金器更依赖纹样、光泽和精细加工。",
+      "appUse": "适合做三星堆到金沙时间轴。",
+      "cacheKey": "official-segment-27",
+      "hasExtensionReading": false,
+      "artifactsText": "金冠带、圆形金器、金沙金器组合",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/27-金沙金器组合-金冠带与圆形金器.mp4",
+      "viewingGuide": "回到金沙金器组合时，可以看金冠带、圆形金器和其他金饰怎样用轻薄材料表达信仰。相比三星堆青铜器的体量和造型，金沙金器更依赖纹样、光泽和精细加工。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "金器的薄度、纹样、边缘处理和光泽。"
+        },
+        {
+          "label": "可以对比",
+          "text": "三星堆用青铜塑造神性，金沙用黄金压缩太阳与王权符号。"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "title": "陶三足器、陶盉与陶器功能",
+      "timecode": "00:46:20-00:48:10",
+      "order": 28,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/28.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/28-陶三足器-陶盉与陶器功能.mp4",
+      "artifacts": [
+        "陶三足器",
+        "陶盉",
+        "陶器功能展板"
+      ],
+      "description": "补入陶器功能展板，展示陶三足器、陶盉、陶器器型和讲解收尾。",
+      "guideScript": "陶三足器、陶盉和功能展板，适合把观看从神圣器物拉回生活技术。看足部、口沿、器身结构和可能用途，就能理解古蜀人怎样盛放、加热、饮用和组织日常生活。",
+      "appUse": "适合做陶器功能配对。",
+      "cacheKey": "official-segment-28",
+      "hasExtensionReading": false,
+      "artifactsText": "陶三足器、陶盉、陶器功能展板",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/28-陶三足器-陶盉与陶器功能.mp4",
+      "viewingGuide": "陶三足器、陶盉和功能展板，适合把观看从神圣器物拉回生活技术。看足部、口沿、器身结构和可能用途，就能理解古蜀人怎样盛放、加热、饮用和组织日常生活。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "三足结构、陶盉形态、口沿和器身比例。"
+        },
+        {
+          "label": "可以对比",
+          "text": "礼器讲仪式，陶器讲生活。两者共同构成文明。"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "title": "青铜罍、青铜容器与纹饰",
+      "timecode": "00:48:10-00:49:10",
+      "order": 29,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/29.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/29-青铜罍-青铜容器与纹饰.mp4",
+      "artifacts": [
+        "青铜罍",
+        "青铜容器",
+        "器身纹饰"
+      ],
+      "description": "青铜罍整体、器身纹饰、主持人讲解和青铜容器组合。",
+      "guideScript": "青铜罍这一段适合看礼器系统。先看器型，再看器身纹饰，最后看它和同柜青铜容器的关系。容器表面是纹样，背后装着的是礼制、交流和权力。",
+      "appUse": "适合做礼器器型图解。",
+      "cacheKey": "official-segment-29",
+      "hasExtensionReading": false,
+      "artifactsText": "青铜罍、青铜容器、器身纹饰",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/29-青铜罍-青铜容器与纹饰.mp4",
+      "viewingGuide": "青铜罍这一段适合看礼器系统。先看器型，再看器身纹饰，最后看它和同柜青铜容器的关系。容器表面是纹样，背后装着的是礼制、交流和权力。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "罍的器型、肩腹比例和器身纹饰。"
+        },
+        {
+          "label": "可以对比",
+          "text": "和陶器对比：陶器偏生活，青铜罍偏礼仪和身份。"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "title": "玉戈、玉刀与长条形玉器",
+      "timecode": "00:49:10-00:50:30",
+      "order": 30,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/30.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/30-玉戈-玉刀与长条形玉器.mp4",
+      "artifacts": [
+        "玉戈",
+        "玉刀",
+        "长条形玉器"
+      ],
+      "description": "玉戈、玉刀、长条形玉器和器身细部。",
+      "guideScript": "玉戈、玉刀和长条形玉器带有兵器外形，但观看时不要马上把它们理解为战斗工具。玉材质会改变器物意义，让锋刃从实用功能转向礼仪、身份和权力象征。",
+      "appUse": "适合做材质改变用途的对比卡。",
+      "cacheKey": "official-segment-30",
+      "hasExtensionReading": false,
+      "artifactsText": "玉戈、玉刀、长条形玉器",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/30-玉戈-玉刀与长条形玉器.mp4",
+      "viewingGuide": "玉戈、玉刀和长条形玉器带有兵器外形，但观看时不要马上把它们理解为战斗工具。玉材质会改变器物意义，让锋刃从实用功能转向礼仪、身份和权力象征。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "刃形、孔洞、长度、打磨和玉质。"
+        },
+        {
+          "label": "可以对比",
+          "text": "和青铜兵器想象对比，再和玉璋、玉琮一起看玉礼器系统。"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "title": "四节玉琮与良渚式玉礼器",
+      "timecode": "00:50:30-00:52:00",
+      "order": 31,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/31.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/31-四节玉琮与良渚式玉礼器.mp4",
+      "artifacts": [
+        "四节玉琮",
+        "良渚式玉礼器"
+      ],
+      "description": "四节玉琮整体、节段、纹理和同柜玉礼器。",
+      "guideScript": "四节玉琮不靠夸张造型吸引人。它值得看的是外方内圆、层层节段和中部孔洞。放在金沙语境中，它提示长江上下游之间可能存在复杂交流网络。",
+      "appUse": "适合做跨区域交流地图。",
+      "cacheKey": "official-segment-31",
+      "hasExtensionReading": true,
+      "artifactsText": "四节玉琮、良渚式玉礼器",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/31-四节玉琮与良渚式玉礼器.mp4",
+      "viewingGuide": "四节玉琮不靠夸张造型吸引人。它值得看的是外方内圆、层层节段和中部孔洞。放在金沙语境中，它提示长江上下游之间可能存在复杂交流网络。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "外方内圆、节段、中孔和玉质。"
+        },
+        {
+          "label": "可以对比",
+          "text": "和良渚式玉琮联系起来看：重点是文化联系，不是单一路线。"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "title": "贝饰、小件饰物与结尾展板",
+      "timecode": "00:52:00-00:53:40",
+      "order": 32,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/32.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/32-贝饰-小件饰物与结尾展板.mp4",
+      "artifacts": [
+        "贝饰",
+        "小件饰物",
+        "结尾展板"
+      ],
+      "description": "贝饰、小件饰物、展板说明和主持人结尾性总结。",
+      "guideScript": "贝饰和小件饰物容易被忽略，但它们常常提供身份、佩戴和资源流动的信息。越小的东西越要放大看：孔洞、磨痕、材质和排列方式，都可能是线索。",
+      "appUse": "适合做放大镜查看细节。",
+      "cacheKey": "official-segment-32",
+      "hasExtensionReading": false,
+      "artifactsText": "贝饰、小件饰物、结尾展板",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/32-贝饰-小件饰物与结尾展板.mp4",
+      "viewingGuide": "贝饰和小件饰物容易被忽略，但它们常常提供身份、佩戴和资源流动的信息。越小的东西越要放大看：孔洞、磨痕、材质和排列方式，都可能是线索。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "孔洞、磨痕、材质和可能的穿缀方式。"
+        },
+        {
+          "label": "可以对比",
+          "text": "大件负责震撼，小件负责补证。古蜀文明的复杂性也藏在小物里。"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "title": "结尾巡礼：金面具、金冠带与太阳神鸟",
+      "timecode": "00:53:40-00:54:50",
+      "order": 33,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/33.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/33-结尾巡礼-金面具-金冠带与太阳神鸟.mp4",
+      "artifacts": [
+        "金面具",
+        "金冠带",
+        "太阳神鸟金饰"
+      ],
+      "description": "结尾视觉巡礼中的金冠带、金面具、太阳神鸟金饰和金器特写。",
+      "guideScript": "结尾巡礼里的金面具、金冠带和太阳神鸟，是金沙金器线的复盘。金面具讲神圣面孔，金冠带讲身份纹样，太阳神鸟讲太阳循环和鸟崇拜。三件合在一起，构成金沙最明亮的一条线索。",
+      "appUse": "适合做结尾复盘和徽章解锁。",
+      "cacheKey": "official-segment-33",
+      "hasExtensionReading": false,
+      "artifactsText": "金面具、金冠带、太阳神鸟金饰",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/33-结尾巡礼-金面具-金冠带与太阳神鸟.mp4",
+      "viewingGuide": "结尾巡礼里的金面具、金冠带和太阳神鸟，是金沙金器线的复盘。金面具讲神圣面孔，金冠带讲身份纹样，太阳神鸟讲太阳循环和鸟崇拜。三件合在一起，构成金沙最明亮的一条线索。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "三件金器分别承担的角色：脸、纹样、太阳循环。"
+        },
+        {
+          "label": "可以对比",
+          "text": "回想前面对应段落，把金沙金器从单件展品连成一条线。"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "title": "结尾巡礼：青铜面具、青铜立人与太阳形器",
+      "timecode": "00:55:00-00:56:30",
+      "order": 34,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/34.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/34-结尾巡礼-青铜面具-青铜立人与太阳形器.mp4",
+      "artifacts": [
+        "青铜面具",
+        "青铜立人像",
+        "青铜太阳形器",
+        "龙柱形青铜器"
+      ],
+      "description": "结尾视觉巡礼中的青铜面具、青铜立人像、太阳形青铜器和龙柱形器。",
+      "guideScript": "这一段集中展示青铜面具、青铜立人、太阳形器和龙柱形器。它们不是简单并列，而是在复盘三星堆的几个关键词：感知、仪式人物、太阳图像和天地连接。",
+      "appUse": "适合做三星堆青铜线复盘。",
+      "cacheKey": "official-segment-34",
+      "hasExtensionReading": true,
+      "artifactsText": "青铜面具、青铜立人像、青铜太阳形器、龙柱形青铜器",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/34-结尾巡礼-青铜面具-青铜立人与太阳形器.mp4",
+      "viewingGuide": "这一段集中展示青铜面具、青铜立人、太阳形器和龙柱形器。它们不是简单并列，而是在复盘三星堆的几个关键词：感知、仪式人物、太阳图像和天地连接。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "面具的眼、立人的姿态、太阳形器的放射结构、龙柱的上下连接。"
+        },
+        {
+          "label": "可以对比",
+          "text": "把它们当作三星堆视觉系统看，比单独记每件更容易理解。"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "title": "结尾巡礼：神坛、神兽、金器与玉琮",
+      "timecode": "00:56:30-00:58:53",
+      "order": 35,
+      "thumbnail": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/thumbs/35.png",
+      "videoFile": "media/video-segments/official-artifacts-refined/35-结尾巡礼-神坛-神兽-金器与玉琮.mp4",
+      "artifacts": [
+        "青铜神坛",
+        "青铜神兽",
+        "镂空喇叭形金器",
+        "四节玉琮"
+      ],
+      "description": "结尾视觉巡礼中的青铜神坛、青铜神兽、镂空喇叭形金器、四节玉琮和国博片尾。",
+      "guideScript": "最后一段把神坛、神兽、金器和玉琮放在一起，是整场展览的收束。神坛指向祭祀结构，神兽指向守护和异兽想象，金器带来太阳与权力，玉琮提示礼仪和远方交流。古蜀文明的价值不只是神秘，而是能把这些不同传统组合起来。",
+      "appUse": "适合做总览页和下一单元入口。",
+      "cacheKey": "official-segment-35",
+      "hasExtensionReading": true,
+      "artifactsText": "青铜神坛、青铜神兽、镂空喇叭形金器、四节玉琮",
+      "remoteUrl": "cloud://sanxingdui-d7gfbfmqj6f999f11.7361-sanxingdui-d7gfbfmqj6f999f11-1259369470/compressed/35-结尾巡礼-神坛-神兽-金器与玉琮.mp4",
+      "viewingGuide": "最后一段把神坛、神兽、金器和玉琮放在一起，是整场展览的收束。神坛指向祭祀结构，神兽指向守护和异兽想象，金器带来太阳与权力，玉琮提示礼仪和远方交流。古蜀文明的价值不只是神秘，而是能把这些不同传统组合起来。",
+      "guideTips": [
+        {
+          "label": "看这里",
+          "text": "神坛、神兽、金器、玉琮分别代表的线索。"
+        },
+        {
+          "label": "总结一下",
+          "text": "本地想象、材料技术、祭祀秩序和跨区域交流，是理解古蜀文明的四个关键词。"
+        }
+      ]
+    }
+  ],
+  "extensionReadings": [
+    {
+      "id": 1,
+      "title": "金沙金面具与古蜀神圣面孔",
+      "artifacts": [
+        "金沙遗址金面具"
+      ],
+      "readingTitle": "金沙金面具与古蜀神圣面孔：神话与野史联想",
+      "factBase": "金沙金面具与三星堆金面罩、青铜面具共同构成古蜀“神圣面孔”的线索。可靠信息只说明它属于古蜀金器与祭祀/权力表达系统，至于它曾覆盖在谁的脸上、是否实际佩戴，仍不能写成定论。",
+      "mythLinks": [
+        "可以把它讲成一张“换身份的脸”。在日常世界里，人有自己的五官；在仪式世界里，黄金替人发光，面具替人发言。它让普通面孔暂时退出，让祖先、王权、太阳般的神圣感站到前面。",
+        "《山海经》的世界里，神常常不是纯粹的人，也不是纯粹的兽，而是带着异相出现。金面具不必对应某个神名，却很适合引出“人怎样变得不像人、从而接近神”的问题。",
+        "野史感可以从“谁有资格戴它”切入：如果这是仪式中的脸，那么戴上它的人可能不是在表演自己，而是在替一个更古老、更有权威的存在出场。"
+      ],
+      "folkHooks": [
+        "这不是古蜀人的自拍照，更像一张给神明看的通行证：脸一换，身份也换了。",
+        "看它时可以想象展柜里不是一件金器，而是一场仪式暂停后的最后一帧：鼓声停了，火光灭了，只剩这张金色的脸还在“值班”。"
+      ],
+      "appHooks": [
+        "互动标题：如果你戴上这张金面具，是在扮王、扮祖先，还是替神明发言？",
+        "视觉处理：金面具扫光后叠到青铜面具剪影上，提示“黄金不是装饰，它在改变脸的身份”。"
+      ],
+      "riskNote": "金面具的具体使用方式和对象仍有讨论。小程序里应写“可能与祭祀、权力和神圣身份有关”，不要写成某位古蜀王的遗物。",
+      "sourceIds": [
+        "S1",
+        "S2",
+        "S9",
+        "L1"
+      ],
+      "artifactsText": "金沙遗址金面具",
+      "readerTitle": "金面具：一张被黄金改写的脸",
+      "readerLead": "看金面具，先别急着猜它是谁。更关键的是，古蜀人为什么要让一张脸变成金色。",
+      "storyParagraphs": [
+        "面具最有意思的地方，是它把人的日常身份暂时拿掉。普通的脸会衰老，会有表情，会被认出来；黄金做成的脸则更稳定、更冷静，也更接近一种仪式里的身份。",
+        "三星堆有金面罩和青铜面具，金沙又出现金面具，这说明古蜀人长期迷恋“被重新制作的脸”。这不是单纯爱美，而是在处理一个很古老的问题：人怎样在仪式中靠近祖先、王权或者神灵。",
+        "所以站在它面前，可以把它看成一件“身份转换器”。戴上它的人不一定是在表现自己，反而可能是在让自己退后，让更高一级的身份出现。"
+      ],
+      "mythCandy": "《山海经》里的神灵常带着异相出现。金面具不对应某个神名，但它提供了同一种思路：神圣形象往往不是照着普通人脸复制，而是要让人一眼觉得“这不是日常世界”。",
+      "readerPrompt": "这张脸是在遮住一个人，还是在制造一个更高的身份？",
+      "carefulNote": "金面具的具体使用方式和佩戴对象仍不能确定。可以讲祭祀和权力象征，不宜说成某位古蜀王的脸。"
+    },
+    {
+      "id": 2,
+      "title": "金沙金冠带与鱼鸟箭纹",
+      "artifacts": [
+        "金沙金冠带",
+        "鱼鸟箭纹"
+      ],
+      "readingTitle": "金沙金冠带与鱼鸟箭纹：神话与野史联想",
+      "factBase": "金沙金冠带上的鱼、鸟、箭、人面纹饰，是金沙金器中最适合做图像拆解的内容。事实层面应聚焦纹饰组合、金器工艺和权力象征，不把纹饰直接等同于某位古蜀王。",
+      "mythLinks": [
+        "鱼从水里来，鸟往天上去，箭带有速度和威慑，人面负责把权力“看”向观众。四种图像排在一条金带上，很像古蜀人为王权写的一句图像咒语：水域、天空、武力、祖先，都被压进一圈黄金。",
+        "古蜀传说里有鱼凫王名，鱼与鸟自然会让人想到“水鸟之王”的叙事。但这里要讲成联想：不是说金冠带画的就是鱼凫，而是说鱼鸟纹样刚好能让观众进入古蜀王名和图腾想象。",
+        "猎奇点在“它像密码”。观众第一眼看见的是装饰，拆开后会发现这不是普通花纹，而是一组可能关于身份、族群、祭祀和统治的图像符号。"
+      ],
+      "folkHooks": [
+        "可以称它为古蜀版“王者皮肤”：鱼管水路，鸟管天空，箭负责气场，人面负责宣布“我在看着你”。",
+        "如果金面具是神圣的脸，金冠带就是神圣身份的弹幕，一圈纹样把王权刷满屏。"
+      ],
+      "appHooks": [
+        "做“拆纹样”卡片：鱼=水域记忆，鸟=天空/太阳，箭=武力与仪式，人面=祖先或权力凝视。",
+        "增加一个“鱼凫是不是答案？”小问答，答案提示：鱼凫是很有吸引力的古蜀传说联想，但不能当成展品定名。"
+      ],
+      "riskNote": "鱼凫关联属于古蜀传说和纹饰联想，不能写成金冠带直接描绘鱼凫王。",
+      "sourceIds": [
+        "S7",
+        "S3",
+        "L1"
+      ],
+      "artifactsText": "金沙金冠带、鱼鸟箭纹",
+      "readerTitle": "金冠带：鱼、鸟、箭和人面排成一组暗语",
+      "readerLead": "金沙金冠带好看的地方在黄金，好玩的地方在纹样。鱼、鸟、箭、人面放在一起，不太像随手装饰。",
+      "storyParagraphs": [
+        "鱼让人想到水域，鸟让人想到天空，箭带着狩猎和威慑，人面则像一个被放在纹样中心的身份符号。它们排成一组，像古蜀人把自己理解世界的方式压进一条金带。",
+        "这种图像不一定能翻译成一句确定的话，但它至少告诉我们：金冠带不是单纯的“漂亮首饰”。它更像一种可以佩戴的权力说明，材料是黄金，语言是图案。",
+        "古蜀传说中有鱼凫王，鱼和鸟又刚好是金冠带上最醒目的元素，于是很多人会自然联想到鱼凫。这个联想有吸引力，但要停在“帮助理解古蜀传说氛围”这一层。"
+      ],
+      "mythCandy": "从神话角度看，鱼和鸟是一组很有意思的方向：一个在水中，一个在天上。古人讲王权和族群记忆时，经常会借动物把地域、能力和身份串起来。",
+      "readerPrompt": "再看一遍纹样：如果这是一条暗语，你觉得哪一个符号最像“权力”的标记？",
+      "carefulNote": "鱼凫只能作为古蜀传说联想，不能说金冠带直接描绘鱼凫王。"
+    },
+    {
+      "id": 3,
+      "title": "金沙发现大事记、三星堆发现历程与青铜大立人",
+      "artifacts": [
+        "金沙遗址考古大事记",
+        "三星堆发现历程展板",
+        "青铜大立人"
+      ],
+      "readingTitle": "金沙发现大事记、三星堆发现历程与青铜大立人：神话与野史联想",
+      "factBase": "青铜大立人是三星堆最具标识性的青铜人像之一，宽袍、冠饰、赤足立于座上，双手呈环握姿态。事实层面可以讲祭祀权力、礼仪中心人物和“手中持何物”的未解问题。",
+      "mythLinks": [
+        "它最有故事性的地方，是双手空着。空不是没有内容，而是把想象力留给观众：权杖、象牙、玉器、枝条、祭器，都可能曾在这个动作里出现过。失去的持物，反而成了三星堆最会吊胃口的悬念。",
+        "《山海经》中有不少神人“操蛇”“珥蛇”“践蛇”的图像母题，重点不是说大立人拿过蛇，而是借这种神人执物的模式，帮助观众理解：在上古想象里，手中之物往往不是工具，而是沟通神力的凭据。",
+        "可以把发现历程讲成“沉睡王国开机”：祭祀坑打开后，不是先给出答案，而是先抛出一个站在三千年前的提问者。"
+      ],
+      "folkHooks": [
+        "他手里到底拿了什么？这是三星堆最适合做弹幕的问题：像领导讲话忘带稿，又像法师施法少了法器。",
+        "但幽默之后要拉回历史：真正重要的不是猜中道具，而是看见古蜀人把“人”做成了仪式中心。"
+      ],
+      "appHooks": [
+        "AR持物实验：用户把象牙、玉璋、权杖、神树枝条放入手中，每个选项都标注“推测”。",
+        "详情页增加“空手之谜”段落，把未知本身设计成阅读钩子。"
+      ],
+      "riskNote": "大立人手持物未定，任何复原方案都只能作为假设展示。不要把“操蛇”等神话母题写成考古事实。",
+      "sourceIds": [
+        "S2",
+        "S9",
+        "S10",
+        "L1"
+      ],
+      "artifactsText": "金沙遗址考古大事记、三星堆发现历程展板、青铜大立人",
+      "readerTitle": "青铜大立人：真正的悬念在他的双手之间",
+      "readerLead": "青铜大立人不是因为“高”才重要，而是因为他站得太像一个仪式中心。",
+      "storyParagraphs": [
+        "这件人像的双手呈环握姿态，像曾经握着某种东西。问题是，那件东西没有留下。象牙、玉器、权杖、枝条，各种猜测都出现过，但都还不能当作定论。",
+        "这恰恰是它最有讲头的地方。古蜀人把一个人铸得如此庄重，又让他的动作集中在双手，说明“手中之物”很可能不只是道具，而是身份和仪式权力的一部分。",
+        "我们今天看见的是缺失，古蜀人当年看见的可能是完整的仪式。大立人的神秘，不在于他像不像某个神，而在于他把一个未知的动作保存了三千多年。"
+      ],
+      "mythCandy": "《山海经》中常见神人执物、操蛇、珥蛇的形象。借这个母题可以帮助理解：上古叙事里，神人手里的东西往往是能力和身份的标志，而不只是工具。",
+      "readerPrompt": "你可以问自己：如果他手里确实有东西，那件东西是用来显示权力，还是用来完成祭祀？",
+      "carefulNote": "大立人手持物仍未确定。所有补全方案都应标注为推测。"
+    },
+    {
+      "id": 7,
+      "title": "青铜纵目面具与夸张眼耳造型",
+      "artifacts": [
+        "青铜纵目面具"
+      ],
+      "readingTitle": "青铜纵目面具与夸张眼耳造型：神话与野史联想",
+      "factBase": "青铜纵目面具双眼柱状外凸、双耳展开，是三星堆最具视觉冲击力的面具之一。四川省文物局资料提到它常被称为“千里眼”“顺风耳”，并列出蚕丛、烛龙、太阳神、祖先神等解释路径。",
+      "mythLinks": [
+        "《华阳国志》记古蜀王蚕丛“其目纵”，这给纵目面具提供了最抓人的古蜀传说入口：一位开国祖先不以普通眼睛出现，而以“异眼”被记住。眼睛越不合理，神性越强。",
+        "《山海经》里的烛龙则更夸张：人面蛇身，睁眼为昼，闭眼为夜。把纵目与烛龙放在一起看，不是为了说它们是同一位神，而是为了让观众理解“眼睛掌管世界”的上古想象。",
+        "这件文物最适合反转“怪异=离奇来路”的直觉：它不像现代人，不是因为要逃离历史，而是因为古蜀人正在刻意制造祖先神的超常感知。"
+      ],
+      "folkHooks": [
+        "别急着找离奇答案。古蜀人可能只是把“看得比人远、听得比人广”的祖先，做成了一张永远不会眨眼的脸。",
+        "如果普通眼睛负责看路，纵目负责看的可能是太阳、祖先和仪式背后的那套秩序。"
+      ],
+      "appHooks": [
+        "四张解释卡：蚕丛纵目、烛龙司昼夜、太阳神凝视、祖先神守护。",
+        "做“睁眼/闭眼”交互：点击眼睛，背景从黑夜切到日光，旁注“烛龙为神话类比”。"
+      ],
+      "riskNote": "蚕丛与烛龙都是解释路径或神话类比。应保留多种观点，并明确这是古蜀信仰和神话母题的叙事，不做伪科学解释。",
+      "sourceIds": [
+        "S4",
+        "S11",
+        "S12",
+        "S13",
+        "L1"
+      ],
+      "artifactsText": "青铜纵目面具",
+      "readerTitle": "纵目面具：古蜀人为什么要把眼睛做得这么突出",
+      "readerLead": "纵目面具的关键不是“怪”，而是它把眼睛和耳朵这两种感知能力推到了极端。",
+      "storyParagraphs": [
+        "它的双眼向前突出，双耳向外展开。这个造型如果按现实人脸看，当然不合理；但如果按祖先神或神圣形象看，它就变得有逻辑了：重要的不是长得像人，而是看得比人远、听得比人广。",
+        "《华阳国志》说古蜀王蚕丛“其目纵”。这句话让纵目面具多了一层古蜀本地传说背景。它可能不是在还原某个人的长相，而是在把“纵目”这种祖先记忆做成可见的形象。",
+        "一些研究还会把纵目与《山海经》中的烛龙、直目、人面蛇身等母题联系起来。这个联系不能当作定名，但它能说明一点：上古想象里，眼睛经常不只是器官，也可以是掌握光明、方向和秩序的能力。"
+      ],
+      "mythCandy": "烛龙神话里有“睁眼为昼、闭眼为夜”的结构。纵目面具不是烛龙，但二者都把“看”提升成了一种超出常人的力量。",
+      "readerPrompt": "看它时别只问像不像人，可以问：古蜀人希望这双眼睛替他们看见什么？",
+      "carefulNote": "蚕丛、烛龙、祖先神都是解释路径。应把它们作为理解线索，而不是唯一答案。"
+    },
+    {
+      "id": 13,
+      "title": "青铜太阳形器与太阳崇拜",
+      "artifacts": [
+        "青铜太阳形器"
+      ],
+      "readingTitle": "青铜太阳形器与太阳崇拜：神话与野史联想",
+      "factBase": "青铜太阳形器常被视为三星堆太阳崇拜的重要图像。它的放射状结构很适合与金沙太阳神鸟对照，形成从青铜太阳到金色太阳鸟的展线记忆。",
+      "mythLinks": [
+        "这件器物最容易被观众玩笑成“方向盘”，但这正好可以当入口：它当然不是开车用的方向盘，而可能是古蜀人把太阳做成可被安置、观看、召唤的神圣符号。",
+        "《山海经》的太阳神话里，太阳会沐浴、栖息、升起。青铜太阳形器不等于这些神话，却能让观众理解：当太阳被做成器物，它就不只是天上的自然现象，而变成了祭祀现场可见的力量。",
+        "猎奇点是“把太阳挂出来”。今天我们用图标表示天气，古蜀人可能把太阳图像放进仪式系统，让看不见的宇宙秩序变成看得见的青铜光芒。"
+      ],
+      "folkHooks": [
+        "先承认它像方向盘，再告诉观众：这辆车不开在路上，开在古蜀人的宇宙观里。",
+        "如果太阳每天都要升起，古蜀人像是给它做了一个青铜徽章。"
+      ],
+      "appHooks": [
+        "动效：光芒从静止到缓慢旋转，再切到太阳神鸟金饰。",
+        "互动问答：“它像方向盘，但它真正可能指向什么？”选项：太阳崇拜、祭祀图像、古蜀宇宙观。"
+      ],
+      "riskNote": "“方向盘”只能作为开场幽默，必须迅速回到太阳崇拜和礼仪图像。",
+      "sourceIds": [
+        "S2",
+        "S9",
+        "S10",
+        "L1"
+      ],
+      "artifactsText": "青铜太阳形器",
+      "readerTitle": "青铜太阳形器：把天上的太阳做成可观看的器物",
+      "readerLead": "它常被玩笑说像方向盘，但如果只停在这个比喻，就错过了真正的重点。",
+      "storyParagraphs": [
+        "青铜太阳形器的放射状结构，很容易让人想到太阳图像。对古蜀人来说，太阳可能不只是自然现象，也是一种可以被纳入祭祀、被图像化、被反复观看的力量。",
+        "这类器物的重要性，在于它把天上的东西拉回到仪式现场。太阳本来遥远、不可触碰，但青铜把它变成了一个可见的符号，观众可以围绕它组织想象。",
+        "如果把它和金沙太阳神鸟放在一起看，就能看到古蜀文明里很稳定的一条线：太阳、光、鸟、旋转、循环，这些观念不断以不同材料出现。"
+      ],
+      "mythCandy": "《山海经》中的太阳会沐浴、栖息、出行。青铜太阳形器不等于这些神话，但它让我们理解，太阳在古人心中常常是会进入仪式和故事的存在。",
+      "readerPrompt": "你可以问：这件器物是在表现太阳本身，还是在表现人们对太阳力量的安排？",
+      "carefulNote": "“方向盘”只是观众的幽默联想，讲解应回到太阳崇拜和礼仪图像。"
+    },
+    {
+      "id": 14,
+      "title": "太阳神鸟、鸟形器与小型金器",
+      "artifacts": [
+        "太阳神鸟金饰",
+        "鸟形器",
+        "鸟形青铜器",
+        "小型金器"
+      ],
+      "readingTitle": "太阳神鸟、鸟形器与小型金器：神话与野史联想",
+      "factBase": "太阳神鸟金饰外层四鸟环绕，内层有旋转光芒，是金沙遗址最具传播度的展品之一，也已成为中国文化遗产标志。事实层面可讲太阳崇拜、鸟崇拜、黄金工艺与金沙文明形象。",
+      "mythLinks": [
+        "《山海经》写扶桑树上有十日栖息，一日居上枝，九日居下枝。太阳神鸟金饰虽然不是扶桑图，但它把“太阳会运行、鸟与太阳相伴”的想象压成了一片会旋转的黄金。",
+        "金乌负日、阳鸟载日、凤凰等太阳鸟母题，都能帮观众理解一个问题：为什么鸟会和太阳绑在一起？因为鸟能飞越地平线，最适合被想象成太阳升落的信使。",
+        "四鸟与十二道光芒也天然带有时间感：四季、十二月、循环、复始。即使这些解释不能写成唯一答案，也足以让观众感到这不是装饰，而是一套关于时间的金色机器。"
+      ],
+      "folkHooks": [
+        "这件金饰的动人之处，是它让太阳不再只是一个圆点，而像是在时间里持续运行。",
+        "四鸟与十二道光芒形成的旋转感，很适合引导观众从“好看”进入“太阳崇拜和时间观”。"
+      ],
+      "appHooks": [
+        "转盘互动：四鸟点亮四季，十二芒点亮月份，最后出现“循环”关键词。",
+        "与青铜神树联动：神树是太阳停靠站，太阳神鸟是太阳运行图标。"
+      ],
+      "riskNote": "四鸟四季、十二芒月份是常见阐释方向之一，不能写成唯一结论。",
+      "sourceIds": [
+        "S6",
+        "S2",
+        "S3"
+      ],
+      "artifactsText": "太阳神鸟金饰、鸟形器、鸟形青铜器、小型金器",
+      "readerTitle": "太阳神鸟：一片金饰里的时间观",
+      "readerLead": "太阳神鸟最打动人的地方，不只是漂亮，而是它让太阳看起来像在运行。",
+      "storyParagraphs": [
+        "外层四只鸟围绕中心旋转，内层光芒呈现强烈的动感。你看到的不是一个静止太阳，而像是太阳、鸟和时间共同组成的循环图像。",
+        "这种图像很适合解释古蜀人的太阳崇拜：太阳每天升起，又每天消失；季节更替，光明反复回来。鸟能飞越地平线，自然容易被想象成太阳运行的伙伴或信使。",
+        "它后来成为中国文化遗产标志，也说明这件金饰的表达很现代：即使不了解全部背景，人也能从它的旋转感里感到秩序、节奏和生命力。"
+      ],
+      "mythCandy": "《山海经》有扶桑十日的母题，太阳栖于神树，轮流出行。太阳神鸟不是扶桑图，但“太阳、鸟、循环”这组关系与这一类神话很容易形成对照。",
+      "readerPrompt": "你可以试着看它的动势：它更像一个太阳，还是一套关于时间循环的图像？",
+      "carefulNote": "四鸟四季、十二芒月份是常见阐释方向之一，但不应写成唯一结论。"
+    },
+    {
+      "id": 15,
+      "title": "龙柱形青铜器、蛇形器与鸟蛇造型",
+      "artifacts": [
+        "龙柱形青铜器",
+        "蛇形器",
+        "鸟形构件"
+      ],
+      "readingTitle": "龙柱形青铜器、蛇形器与鸟蛇造型：神话与野史联想",
+      "factBase": "龙柱形青铜器、蛇形器、鸟形构件说明古蜀祭祀图像中存在复合动物与天地沟通的造型。事实层面宜讲鸟、蛇、龙、柱状结构的组合关系。",
+      "mythLinks": [
+        "《山海经》的烛龙是人面蛇身、掌管昼夜的神。把它放到这里，可以帮助观众理解为什么“蛇/龙”常常不只是动物，而会成为山川、风雨、昼夜和地下力量的象征。",
+        "鸟往上，蛇龙盘绕，柱子居中，这三件事放在一起，很容易形成一条垂直叙事：天上有太阳鸟，地下有龙蛇力量，中间有柱子把两个世界接起来。",
+        "猎奇感来自“拼装神力”：古蜀人似乎不满足于单一动物，而是把会飞的、会盘绕的、能支撑的东西合成一个更强的神话装置。"
+      ],
+      "folkHooks": [
+        "鸟负责上天，龙蛇负责通地，柱子负责别让宇宙散架。",
+        "这不是动物园，是古蜀人的神力合成台。"
+      ],
+      "appHooks": [
+        "三层标注：鸟=天界/太阳，蛇龙=地脉/神力，柱=天地轴。",
+        "与纵目面具做“烛龙线索”串联，但每处都标注“神话类比”。"
+      ],
+      "riskNote": "龙蛇含义复杂，不可直接定名为烛龙。应写成“可与烛龙等人面蛇身、司昼夜母题对照”。",
+      "sourceIds": [
+        "S10",
+        "S12",
+        "S13",
+        "L1"
+      ],
+      "artifactsText": "龙柱形青铜器、蛇形器、鸟形构件",
+      "readerTitle": "龙柱与鸟蛇：古蜀人怎样想象天地之间的通道",
+      "readerLead": "鸟、蛇、龙、柱这些元素放在一起，重点不是认动物，而是看它们怎样分工。",
+      "storyParagraphs": [
+        "鸟往上飞，天然接近天空和太阳；蛇、龙则常和山川、地脉、风雨联系在一起；柱状结构把视线从下方带到上方。它们合在一起，就像在表达天地之间的联通。",
+        "古蜀器物里常见这种复合思维：不是画一只现实动物，而是把几种能力组合起来。能飞、能盘绕、能支撑、能通天，这些能力比物种名称更重要。",
+        "所以看龙柱形器和蛇形器时，不必急着找一个唯一答案。它们更像古蜀神话系统里的“连接件”，把太阳、动物、山川和仪式空间串到一起。"
+      ],
+      "mythCandy": "《山海经》中的烛龙有人面蛇身、司昼夜的特征。这里不能直接定名为烛龙，但可以借它理解蛇龙为何常被赋予连接自然力量的意义。",
+      "readerPrompt": "你可以问：在这个组合里，哪一个元素负责天空，哪一个负责地脉，哪一个负责连接？",
+      "carefulNote": "龙蛇含义复杂，只能做神话母题对照，不能直接命名。"
+    },
+    {
+      "id": 17,
+      "title": "兽首冠青铜立人像与人神造型",
+      "artifacts": [
+        "兽首冠青铜立人像",
+        "青铜立人像"
+      ],
+      "readingTitle": "兽首冠青铜立人像与人神造型：神话与野史联想",
+      "factBase": "兽首冠青铜立人像与青铜立人像共同呈现古蜀人像的仪式化特征：人形身体、夸张装束、特殊冠饰和手势。事实层面可讲人像系统、服饰、冠饰和祭祀角色。",
+      "mythLinks": [
+        "它的吸引力在“人不像普通人”。身体是人的，装备却把人推向神职：冠饰像身份开关，手势像仪式口令，站姿像正在等待某个神圣流程启动。",
+        "《山海经》里有大量半人半兽、神人异相的形象。这里不需要硬配某个神名，只要让观众意识到：古人常用“人身加异物”的方式表现超出普通人的权威。",
+        "兽首冠可以讲成“把动物力量戴在头上”。这不是可爱头饰，而是把山林、猛兽、守护、威慑这类力量压缩成冠饰。"
+      ],
+      "folkHooks": [
+        "身体像人，装备像神，表情像正在参加一场迟到会出大事的祭祀。",
+        "如果现代人靠工牌证明身份，古蜀祭祀人物可能靠冠饰和手势证明“我有资格进场”。"
+      ],
+      "appHooks": [
+        "热点拆解：冠饰、手势、衣纹、足座分别弹出解释。",
+        "角色选择：主祭者、献礼者、守护者、祖先神形象，让用户理解都是叙事假设。"
+      ],
+      "riskNote": "“人神合一”“半人半神”是叙事化表达，不指定具体神格或真实身份。",
+      "sourceIds": [
+        "S2",
+        "S9",
+        "S10",
+        "L1"
+      ],
+      "artifactsText": "兽首冠青铜立人像、青铜立人像",
+      "readerTitle": "兽首冠立人：人像为什么要加上动物的力量",
+      "readerLead": "这类人像的重点不是“像不像人”，而是它怎样把人变成仪式角色。",
+      "storyParagraphs": [
+        "青铜立人像保留了人的身体，但冠饰、手势、服饰和姿态都不是日常状态。它更像一个被装束重新定义的人：穿戴之后，身份就发生变化。",
+        "兽首冠尤其值得细看。动物形象被放在头部，意味着某种力量被戴在了身上。山林、猛兽、守护、威慑，这些含义都可能被压缩进冠饰。",
+        "这种处理方式在上古艺术中并不少见。人像不只是人像，常常是人、祖先、神职和动物力量的混合表达。"
+      ],
+      "mythCandy": "《山海经》中有大量神人异相、半人半兽的形象。这里不必对应某一位神，但可以帮助我们理解：古人常用“人身加异物”的方式表达超常身份。",
+      "readerPrompt": "你可以问：这件冠饰是在装饰他，还是在改变他的身份？",
+      "carefulNote": "“人神合一”是叙事化理解，不能据此确认具体神格。"
+    },
+    {
+      "id": 19,
+      "title": "大型青铜神坛组合与人兽建筑图像",
+      "artifacts": [
+        "大型青铜神坛",
+        "神坛人物",
+        "神坛动物构件",
+        "建筑式构件"
+      ],
+      "readingTitle": "大型青铜神坛组合与人兽建筑图像：神话与野史联想",
+      "factBase": "大型青铜神坛把人物、动物、建筑式构件和礼仪图像组合在一起，是理解三星堆祭祀想象的重要材料。事实层面应承认其复原和解释复杂。",
+      "mythLinks": [
+        "可以把它讲成“三千年前的宇宙剧场”：底层像人间秩序，中层出现神兽和支撑结构，上层通向更高的神域。观众不必一次看懂，但可以一层一层进入。",
+        "《山海经》式世界不是平面的，而是山、海、神、人、异兽共同存在。神坛的复杂性正适合借这个世界观来解释：古蜀祭祀可能也不是单点崇拜，而是一套多层关系。",
+        "猎奇点在“说明书丢了”。它像一台仪式机器，零件都在，操作手册却没有留下。小程序要做的不是假装知道全部答案，而是带观众读懂几个关键部件。"
+      ],
+      "folkHooks": [
+        "这像一张祭祀流程图，只是流程图没有文字，全靠青铜人、神兽和建筑构件自己站出来解释。",
+        "看不懂很正常，三千年前的人可能也不是让所有人看懂，而是让所有人感到敬畏。"
+      ],
+      "appHooks": [
+        "纵向滚动点读：底座、人像、神兽、建筑式构件、顶端图像逐层展开。",
+        "增加“我看到了什么”互动：用户先选元素，再显示可能的仪式层级解释。"
+      ],
+      "riskNote": "神坛复原和功能解释需要谨慎。“三层宇宙”是导览叙事框架，不是定论。",
+      "sourceIds": [
+        "S2",
+        "S9",
+        "S10",
+        "L2"
+      ],
+      "artifactsText": "大型青铜神坛、神坛人物、神坛动物构件、建筑式构件",
+      "readerTitle": "大型青铜神坛：一座没有说明书的仪式模型",
+      "readerLead": "神坛难懂很正常。它不是让人一眼看明白的展品，而是把很多层关系压在一起。",
+      "storyParagraphs": [
+        "人物、动物、建筑式构件共同出现，说明它不是单纯的器物，而像一套仪式图像。你可以从下往上看：哪里像支撑，哪里像守护，哪里像通向更高层级。",
+        "神坛的复杂性，恰好反映了三星堆祭祀系统的复杂。它可能涉及人、神、动物、空间和等级关系。我们今天缺少文字说明，只能靠形象之间的关系慢慢读。",
+        "这件东西最吸引人的地方，不是能立刻给答案，而是它让你感到：古蜀人的精神世界不是单线条的，而是有结构、有层级、有场面的。"
+      ],
+      "mythCandy": "《山海经》的世界也是多层的，山海、神人、异兽常常同处一个叙事空间。借这个视角看神坛，会更容易理解它为什么复杂而庄重。",
+      "readerPrompt": "你可以把它当成一座小型舞台：谁在支撑，谁在守护，谁可能处在最神圣的位置？",
+      "carefulNote": "神坛复原和功能解释仍需谨慎，分层阅读只是导览方法。"
+    },
+    {
+      "id": 23,
+      "title": "青铜神兽、兽形器与复合动物造型",
+      "artifacts": [
+        "青铜神兽",
+        "兽形器",
+        "复合动物构件"
+      ],
+      "readingTitle": "青铜神兽、兽形器与复合动物造型：神话与野史联想",
+      "factBase": "青铜神兽和兽形器体现三星堆复合动物造型传统。事实层面可讲角、耳、口、爪、身段等局部特征，以及它们在祭祀系统中的守护和神性表达。",
+      "mythLinks": [
+        "《山海经》的异兽最迷人之处，是它们经常不按现实动物规则生长：一只身体可以混合多种能力。青铜神兽也适合这样读：不像单一动物，正说明它可能承担的不是写实任务，而是神力任务。",
+        "不要急着问“它到底是什么动物”。更有意思的问题是：古蜀人希望它拥有哪些能力？角负责威慑，口负责吞吐，爪负责力量，身段负责运动感，组合起来就是守护仪式边界的怪力。",
+        "猎奇感可以来自“拼合识别”：观众越猜不出它像什么，越容易进入古蜀人的复合想象。"
+      ],
+      "folkHooks": [
+        "它最大的本事就是不像任何一种动物，因为它可能压根没打算只做一种动物。",
+        "这不是古蜀动物园，是神兽盲盒：每个部位都像从不同力量里抽出来拼上去。"
+      ],
+      "appHooks": [
+        "拼合识别小游戏：角、耳、口、爪、尾、身段分别点亮，显示“可能借用的动物能力”。",
+        "和《山海经》异兽做“同类想象墙”，只比较创作逻辑，不强行配名。"
+      ],
+      "riskNote": "不能强行命名为某个《山海经》神兽。应写“同类想象”“复合动物母题”。",
+      "sourceIds": [
+        "S9",
+        "S10",
+        "L1"
+      ],
+      "artifactsText": "青铜神兽、兽形器、复合动物构件",
+      "readerTitle": "青铜神兽：不像一种动物，可能正是重点",
+      "readerLead": "看青铜神兽，不一定要先问它是什么动物。也许古蜀人本来就没打算让它只像一种动物。",
+      "storyParagraphs": [
+        "复合动物造型的妙处，在于它把不同能力集中到一个身体上。角可能代表威慑，口部带来吞吐和力量感，爪与身段强调运动和守护。",
+        "这种形象不服务于动物分类，而服务于神圣区域的气氛。它让观众意识到：这里已经不是日常世界，眼前的存在有超出普通动物的能力。",
+        "《山海经》的异兽世界也常常这样处理形象：不按现实动物规则生长，而是按能力和象征组合。青铜神兽可以放在这个大背景下理解。"
+      ],
+      "mythCandy": "把它和《山海经》异兽对照，重点不是找同名同姓的神兽，而是看“复合动物”这种想象方式如何表现超自然力量。",
+      "readerPrompt": "你可以看它的局部：哪一处最像在表达威慑，哪一处最像在表达守护？",
+      "carefulNote": "不要强行给它套某个《山海经》神兽名称。"
+    },
+    {
+      "id": 25,
+      "title": "青铜神树整体、枝鸟与龙蛇构件",
+      "artifacts": [
+        "青铜神树",
+        "枝上立鸟",
+        "龙蛇构件"
+      ],
+      "readingTitle": "青铜神树整体、枝鸟与龙蛇构件：神话与野史联想",
+      "factBase": "青铜神树由树干、分层枝条、枝上立鸟和龙蛇构件组成，是三星堆太阳崇拜、神树想象和天地沟通观念的核心展品之一。",
+      "mythLinks": [
+        "《山海经·海外东经》写汤谷上有扶桑，十日沐浴，水中大木，九日居下枝，一日居上枝。青铜神树不能直接等同扶桑，但“树、鸟、太阳、升降”这组图像关系高度适合放在一起讲。",
+        "还可以引入建木、若木等神树母题：神树不是普通植物，而是天地之间的梯子、太阳运行的驿站、神灵上下的道路。青铜神树的震撼就在于，它把这条道路做成了青铜实体。",
+        "猎奇点是“太阳停靠站”：如果太阳不是凭空升起，而是每天从神树系统里出发，那么枝上的鸟就像排队待命的光。"
+      ],
+      "folkHooks": [
+        "如果太阳每天要打卡上班，青铜神树可能就是古蜀人想象里的太阳停靠站。",
+        "九只鸟在枝头，一轮日在高处，这不是树木盆景，是一套会发光的宇宙排班表。"
+      ],
+      "appHooks": [
+        "动态树：从下枝到上枝逐一点亮九鸟，最后顶部一日升起。",
+        "神话对照卡：扶桑十日、建木通天、若木日入，全部标注“神话母题对照”。"
+      ],
+      "riskNote": "不能说青铜神树就是《山海经》扶桑。应写“与扶桑十日、通天神树母题高度适配”。",
+      "sourceIds": [
+        "S5",
+        "S12",
+        "S13",
+        "L1"
+      ],
+      "artifactsText": "青铜神树、枝上立鸟、龙蛇构件",
+      "readerTitle": "青铜神树：太阳、鸟和龙蛇共同组成的通天想象",
+      "readerLead": "青铜神树不是普通植物。它更像古蜀人把宇宙结构做成了一棵树。",
+      "storyParagraphs": [
+        "树干向上，枝条分层，枝上有鸟，树身又有龙蛇构件。它把天空、太阳、动物和上下通道放在同一个形象里，让“通天”不再只是抽象说法。",
+        "如果只看树，它是植物；如果把鸟和龙蛇一起看，它就成了一套世界结构：鸟把太阳带向天空，龙蛇连接更深的自然力量，树干承担上下贯通的轴线。",
+        "这就是青铜神树最有分量的地方。它不是简单复制自然界的一棵树，而是在用树的形象组织古蜀人对太阳、天地和神灵往来的想象。"
+      ],
+      "mythCandy": "《山海经》有扶桑十日，也有通天神树一类母题。青铜神树不能直接等同扶桑，但“树、鸟、太阳、升降”的组合非常适合做神话对照。",
+      "readerPrompt": "你可以问：这棵树是在表现自然，还是在表现一条天地之间的道路？",
+      "carefulNote": "不能说青铜神树就是扶桑，只能说与扶桑十日、通天神树母题相互参照。"
+    },
+    {
+      "id": 26,
+      "title": "神树构件展板、鸟蛇纹样与衣饰形制解释",
+      "artifacts": [
+        "神树构件展板",
+        "鸟蛇纹样",
+        "衣饰形制展板"
+      ],
+      "readingTitle": "神树构件展板、鸟蛇纹样与衣饰形制解释：神话与野史联想",
+      "factBase": "神树构件、鸟蛇纹样和衣饰形制解释，适合帮助观众从局部理解整体：鸟、龙蛇、树干、人物装束共同服务古蜀祭祀图像。",
+      "mythLinks": [
+        "如果说青铜神树是一部大戏，那么鸟、蛇、龙、枝条、衣饰就是分镜。鸟把视线带向天空，龙蛇把力量拉向山川和地下，树干把上下世界接在一起。",
+        "《山海经》式神话常用复合图像解释宇宙：太阳不是单独出现，常伴随神树、神鸟、神人、异兽。神树构件恰好能把这些母题拆给观众看。",
+        "猎奇点在“局部比整体更会说话”。一只鸟、一段蛇形构件、一条衣纹，都像从更大的神话机器上拆下来的零件。"
+      ],
+      "folkHooks": [
+        "古蜀人的世界观不是极简风，是满配宇宙版：树上安排鸟，树身安排龙，人物还要穿对衣服。",
+        "看构件时不要嫌碎，它们像神树的零件清单，拼起来才知道这棵树为什么不只是树。"
+      ],
+      "appHooks": [
+        "三热点讲解：鸟=太阳载体，龙蛇=神力通道，树=天地轴线。",
+        "局部到整体动效：先看鸟蛇构件，再回到神树全貌。"
+      ],
+      "riskNote": "三热点是策展和导览框架，不是唯一学术解释。构件含义应保持开放。",
+      "sourceIds": [
+        "S5",
+        "S12",
+        "S13",
+        "L1"
+      ],
+      "artifactsText": "神树构件展板、鸟蛇纹样、衣饰形制展板",
+      "readerTitle": "神树构件：零件越细，越能看出古蜀人的想象方法",
+      "readerLead": "看神树构件，不要只觉得零散。它们其实能帮你拆开古蜀图像的工作原理。",
+      "storyParagraphs": [
+        "鸟、蛇、龙、枝条、衣饰，每个局部都不是随便出现的。鸟把视线引向天空，龙蛇带来盘绕和通地的力量，树干则让上下世界有了连接方式。",
+        "这些构件像一套图像语法。单独看，它们是零件；合在一起，它们帮助古蜀人表达太阳运行、神灵往来和祭祀秩序。",
+        "所以这一类展品适合慢看。它不像完整神树那样一眼震撼，但它能告诉你：古蜀人的神秘感不是乱来的，而是通过很多可重复的图像元素搭建起来的。"
+      ],
+      "mythCandy": "《山海经》式神话经常把神树、神鸟、龙蛇和异兽放在同一宇宙框架里。神树构件正好让我们把这些母题拆开理解。",
+      "readerPrompt": "你可以试着给每个构件分工：谁负责天空，谁负责地脉，谁负责连接？",
+      "carefulNote": "这种分工是帮助阅读的框架，不是唯一学术结论。"
+    },
+    {
+      "id": 31,
+      "title": "四节玉琮与良渚式玉礼器",
+      "artifacts": [
+        "四节玉琮",
+        "良渚式玉礼器"
+      ],
+      "readingTitle": "四节玉琮与良渚式玉礼器：神话与野史联想",
+      "factBase": "四节玉琮体现金沙与良渚式玉礼器之间的联系，是长江上下游文化交流的重要线索。事实层面应讲玉礼器、形制传播和跨区域交流。",
+      "mythLinks": [
+        "玉琮常被解释为外方内圆的礼器形态，容易引向“方地圆天”的天地观。对观众来说，它不像青铜神兽那样刺激，却像一件安静的通天装置：外面是秩序，里面是孔道。",
+        "它的故事性不在怪，而在远。良渚式玉礼器与金沙同框，说明古蜀文明不是封闭孤岛；有些观念、材料、工艺和礼仪形式，可能沿着河流与人群移动了很久。",
+        "猎奇点可以从“千里之外的礼器语言”切入：没有互联网，没有地图导航，但相似的礼仪符号却能跨区域出现。"
+      ],
+      "folkHooks": [
+        "它像古代文明的加密接口：外方内圆，中间开孔，仿佛专门留给天地通话。",
+        "别看它安静，它其实很会跑。它把良渚、长江流域和成都平原悄悄连在了一起。"
+      ],
+      "appHooks": [
+        "地图线：太湖良渚文化区到成都平原金沙遗址，展示“风格联系/文化交流”。",
+        "剖面卡：外方、内圆、中孔、节段，分别对应秩序、天地观和礼仪通道的解释。"
+      ],
+      "riskNote": "具体流转路径未明，应说“显示联系”“提示交流”，不要写成直接迁徙或单一路线。",
+      "sourceIds": [
+        "S8",
+        "S2",
+        "S3"
+      ],
+      "artifactsText": "四节玉琮、良渚式玉礼器",
+      "readerTitle": "四节玉琮：安静的玉器，背后是很长的交流路线",
+      "readerLead": "玉琮不像神兽那样抓眼，也不像金器那样耀眼，但它讲的是另一种重要故事：交流。",
+      "storyParagraphs": [
+        "玉琮常被用来讨论外方内圆、天地观和礼仪秩序。它的形状很克制，却能让人感到一种稳定的规则：外面有边界，中间有孔道，像把天地关系压进一件玉器。",
+        "金沙出现良渚式玉礼器线索，说明成都平原并不是孤立存在。长江上下游之间，可能早已有观念、器形、工艺和礼仪语言的流动。",
+        "它的神秘感不是怪异，而是距离。一个地方的礼器形式，为什么会在另一个地方被看见？中间经过了多少人、路线和选择？这正是玉琮的故事。"
+      ],
+      "mythCandy": "如果把玉琮看作天地通道，它就能和神树、神坛形成呼应：一个用玉表现孔道，一个用树表现通天，一个用青铜表现仪式空间。",
+      "readerPrompt": "你可以问：这件安静的玉器，背后连接的是哪一片更大的文明网络？",
+      "carefulNote": "具体传播路线未明，应说显示联系、提示交流，不说成单一路径。"
+    },
+    {
+      "id": 34,
+      "title": "结尾巡礼：青铜面具、青铜立人与太阳形器",
+      "artifacts": [
+        "青铜面具",
+        "青铜立人像",
+        "青铜太阳形器",
+        "龙柱形青铜器"
+      ],
+      "readingTitle": "结尾巡礼：青铜面具、青铜立人与太阳形器：神话与野史联想",
+      "factBase": "结尾巡礼中的青铜面具、青铜立人像、青铜太阳形器和龙柱形器，集中呈现三星堆“人像、面具、太阳、龙蛇”的视觉系统。",
+      "mythLinks": [
+        "纵目面具可联系蚕丛纵目和烛龙直目，太阳形器可联系太阳崇拜，龙蛇造型可联系通天和昼夜母题；这些线索适合帮助观众理解图像系统。"
+      ],
+      "folkHooks": [
+        "一个负责看穿远方，一个负责站在中心，一个负责把太阳挂出来，一个负责把天地接上线。",
+        "这不是单件文物大合影，而像古蜀神话系统的结算页面。"
+      ],
+      "appHooks": [
+        "结尾联动可按“面具=感知，立人=仪式中心，太阳形器=天象，龙柱形器=通达天地”的结构呈现。",
+        "交互上可让观众在四件器物之间切换，观察它们如何共同构成三星堆的视觉系统。"
+      ],
+      "riskNote": "蚕丛、烛龙、太阳神、通天柱都是联想路径。结尾可做系统化叙事，但要明确不是确定仪式复原。",
+      "sourceIds": [
+        "S4",
+        "S12",
+        "S13",
+        "S2",
+        "S9"
+      ],
+      "artifactsText": "青铜面具、青铜立人像、青铜太阳形器、龙柱形青铜器",
+      "readerTitle": "面具、立人、太阳形器：把三星堆的几条线索合在一起看",
+      "readerLead": "到了结尾巡礼，不必再把每件文物孤立看。它们放在一起，正好能帮你复盘三星堆的核心问题。",
+      "storyParagraphs": [
+        "面具处理的是脸和身份，立人处理的是仪式中的人，太阳形器处理的是光和天象，龙柱形器则把龙蛇、柱和通天想象连在一起。",
+        "这些东西单看都神秘，合起来就能看出一套系统：古蜀人关心怎样看见神圣，怎样让人进入仪式角色，怎样把太阳和天地力量变成可见图像。",
+        "所以结尾不是简单的大合影，而是把前面的线索收回来。你会发现，三星堆的神秘感不是某一件文物制造的，而是一整套图像系统共同制造的。"
+      ],
+      "mythCandy": "蚕丛纵目、烛龙直目、太阳崇拜、龙蛇通天，这些神话和传说线索不能替代考古解释，但能帮我们理解这些形象为什么集中在“看见、发光、通达”上。",
+      "readerPrompt": "你可以问：这一组里，哪件最能代表“看见”，哪件最能代表“通天”？",
+      "carefulNote": "这是系统化导览，不是确定的仪式复原。"
+    },
+    {
+      "id": 35,
+      "title": "结尾巡礼：神坛、神兽、金器与玉琮",
+      "artifacts": [
+        "青铜神坛",
+        "青铜神兽",
+        "镂空喇叭形金器",
+        "四节玉琮"
+      ],
+      "readingTitle": "结尾巡礼：神坛、神兽、金器与玉琮：神话与野史联想",
+      "factBase": "青铜神坛、青铜神兽、金器与四节玉琮共同收束古蜀祭祀、复合神兽、黄金权力和跨区域玉礼器交流。事实层面应强调它们分别代表不同材料、功能和文化线索。",
+      "mythLinks": [
+        "可以把结尾讲成四种力量汇合：神坛提供仪式空间，神兽守住边界，金器制造神圣光感，玉琮连接天地与远方文化。它们不一定属于同一场仪式，却能共同概括古蜀文明的复杂性。",
+        "《山海经》式世界里，神、人、兽、山川、器物没有完全分家。三星堆和金沙的魅力也在这里：青铜像神，黄金像光，玉器像秩序，神兽像边界守卫。",
+        "猎奇感不要停在“神秘”，而要升级成“复杂”：真正让人上头的不是猜一个答案，而是发现古蜀文明同时懂图像、材料、仪式和交流。"
+      ],
+      "folkHooks": [
+        "最后别只记住神秘。古蜀文明真正厉害的是：本地想象、远方技术、黄金光芒和玉礼器秩序，全被它揉到了一起。",
+        "神坛像舞台，神兽像保安，金器像灯光，玉琮像通道。仪式还没开始，阵容已经很强。"
+      ],
+      "appHooks": [
+        "结尾总览四标签：祭祀空间、神兽守护、黄金神圣、玉礼交流。",
+        "引导下一步：从“惊世秘藏”进入“人神共舞”“崇祀天地”“互融共鉴”。"
+      ],
+      "riskNote": "适合做总结性叙事，但不要把神坛、神兽、金器、玉琮强行解释为同一仪式组合。",
+      "sourceIds": [
+        "S2",
+        "S3",
+        "S8",
+        "S10"
+      ],
+      "artifactsText": "青铜神坛、青铜神兽、镂空喇叭形金器、四节玉琮",
+      "readerTitle": "神坛、神兽、金器、玉琮：古蜀文明的厉害在于会组合",
+      "readerLead": "最后这一组，不要只用“神秘”概括。它更像在展示古蜀文明怎样把不同传统放进同一个世界。",
+      "storyParagraphs": [
+        "神坛指向祭祀空间，神兽指向守护和异兽想象，金器带来光和权力，玉琮则提示跨区域礼仪交流。它们材料不同、功能不同，却能共同说明古蜀文明的复杂程度。",
+        "真正值得注意的是组合能力。古蜀人不是只会做青铜，也不是只会做金器；他们把本地想象、远方器形、祭祀秩序和材料美学不断叠加。",
+        "因此看完这一组，可以把“神秘”再往前推进一步：神秘不是因为没有线索，而是因为线索太多，青铜、黄金、玉器、神兽和神坛都在同时说话。"
+      ],
+      "mythCandy": "《山海经》式世界里，神、人、兽、山川、器物常常彼此交织。三星堆和金沙也给人类似感受：边界不是被抹掉，而是被放进同一套想象结构里。",
+      "readerPrompt": "你可以问：如果用四个词记住这组文物，你会选祭祀、守护、光、交流，还是别的？",
+      "carefulNote": "适合做总结性叙事，但不能把这些器物强行解释为同一场仪式组合。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "label": "文化和旅游部/中国国家博物馆展览报道",
+      "url": "https://www.mct.gov.cn/preview/whzx/zsdw/zggjbwg/202601/t20260109_964051.html"
+    },
+    {
+      "id": "S2",
+      "label": "央视展览报道",
+      "url": "https://yangbo.cctv.com/2026/01/19/ARTI9tfTeuutpC4tqvtqHSCK260119.shtml"
+    },
+    {
+      "id": "S3",
+      "label": "中国社会科学网展览报道",
+      "url": "https://www.cssn.cn/ysx/ysx_ysqs/202601/t20260120_5970043.shtml"
+    },
+    {
+      "id": "S4",
+      "label": "四川省文物局：青铜纵目面具",
+      "url": "https://wwj.sc.gov.cn/scwwj/sdai/2023/4/25/11995271d8f5407b88a965b38e4a3fbd.shtml"
+    },
+    {
+      "id": "S5",
+      "label": "四川在线：青铜神树与太阳崇拜报道",
+      "url": "https://sichuan.scol.com.cn/ggxw/202410/82640210.html"
+    },
+    {
+      "id": "S6",
+      "label": "四川省文物局：太阳神鸟金饰",
+      "url": "https://wwj.sc.gov.cn/scwwj/sdai/2020/4/24/606c893b4b8f4d13b0d8ad045e679ac5.shtml"
+    },
+    {
+      "id": "S7",
+      "label": "四川省文物局：金沙金器相关资料",
+      "url": "https://wwj.sc.gov.cn/scwwj/zdai/2020/8/7/ced48546a7d54893ba0a96141aab57cf.shtml"
+    },
+    {
+      "id": "S8",
+      "label": "成都金沙遗址博物馆",
+      "url": "https://www.jinshasitemuseum.com/"
+    },
+    {
+      "id": "S9",
+      "label": "中国新闻网展览图集",
+      "url": "https://www.chinanews.com.cn/m/tp/hd/2026/0118/177986.shtml"
+    },
+    {
+      "id": "S10",
+      "label": "科技日报展览报道",
+      "url": "https://www.stdaily.com/web/gdxw/2026-01/18/content_463242.html"
+    },
+    {
+      "id": "S11",
+      "label": "华西都市报神树阐释报道",
+      "url": "https://www.wccdaily.com.cn/wapepaper/html/20220214/168222.html"
+    },
+    {
+      "id": "S12",
+      "label": "《山海经》相关篇章",
+      "url": "https://www.gushiwen.cn/shiwenv.aspx?id=1df2aa71460f"
+    },
+    {
+      "id": "S13",
+      "label": "《华阳国志》相关篇章",
+      "url": "https://www.gushiwen.cn/guwen/bookv_17eec8e362ae.aspx"
+    },
+    {
+      "id": "S14",
+      "label": "微信文章本地素材",
+      "url": "https://mp.weixin.qq.com/s/BAvUl1f18vjbBi1XjtzF_g"
+    },
+    {
+      "id": "L1",
+      "label": "本地微信文章图片与说明",
+      "url": "local:public/wechat-bavul-assets/inventory.json"
+    },
+    {
+      "id": "L2",
+      "label": "本地官方视频切片分析",
+      "url": "local:media/video-analysis/segments.json"
+    }
+  ],
+  "copyrightNotice": "本小程序内容为看展辅助与学习整理。文物图片、官方讲解视频和展览资料版权归原权利方所有；页面展示应控制引用范围，标注来源，避免提供无授权的二次分发下载。"
+}
