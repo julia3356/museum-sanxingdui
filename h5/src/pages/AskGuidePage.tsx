@@ -22,6 +22,28 @@ function renderMessage(text: string) {
   ));
 }
 
+const tokenStorageKey = 'museum-agent-access-token';
+
+function readStoredToken() {
+  try {
+    return window.sessionStorage.getItem(tokenStorageKey) || '';
+  } catch {
+    return '';
+  }
+}
+
+function writeStoredToken(value: string) {
+  try {
+    if (value) {
+      window.sessionStorage.setItem(tokenStorageKey, value);
+    } else {
+      window.sessionStorage.removeItem(tokenStorageKey);
+    }
+  } catch {
+    // Ignore storage failures; the current input value still works for this request.
+  }
+}
+
 export function AskGuidePage({ segmentId }: { segmentId?: number }) {
   const segment = segmentId ? getSegment(segmentId) : undefined;
   const questions = useMemo(() => quickQuestions(segment), [segment]);
@@ -29,8 +51,11 @@ export function AskGuidePage({ segmentId }: { segmentId?: number }) {
     { id: messageId(), role: 'assistant', text: openingMessage(segment) },
   ]);
   const [question, setQuestion] = useState('');
+  const [accessToken, setAccessToken] = useState(readStoredToken);
   const [loading, setLoading] = useState(false);
-  const [quotaText, setQuotaText] = useState('H5 优先尝试云端 Agent；不可用时使用本地资料回答');
+  const [quotaText, setQuotaText] = useState(
+    accessToken ? '已填写访问口令；提问时将调用云端 Agent' : '请输入访问口令后提问；无口令不会调用模型',
+  );
 
   async function ask(rawQuestion: string) {
     const trimmed = rawQuestion.trim();
@@ -47,9 +72,14 @@ export function AskGuidePage({ segmentId }: { segmentId?: number }) {
 
     setQuestion('');
     setLoading(true);
+    writeStoredToken(accessToken.trim());
     setMessages((current) => [...current, { id: messageId(), role: 'user', text: trimmed }]);
 
-    const result = await askGuide({ question: trimmed, segmentId: segment?.id });
+    const result = await askGuide({
+      question: trimmed,
+      segmentId: segment?.id,
+      accessToken: accessToken.trim(),
+    });
     setQuotaText(result.quotaText);
     setMessages((current) => [
       ...current,
@@ -87,6 +117,23 @@ export function AskGuidePage({ segmentId }: { segmentId?: number }) {
             {entry}
           </button>
         ))}
+      </section>
+
+      <section className="access-panel" aria-label="访问口令">
+        <label htmlFor="agent-token">访问口令</label>
+        <input
+          id="agent-token"
+          type="password"
+          value={accessToken}
+          placeholder="输入口令后再提问"
+          autoComplete="off"
+          onChange={(event) => {
+            const value = event.target.value;
+            setAccessToken(value);
+            writeStoredToken(value.trim());
+            setQuotaText(value.trim() ? '已填写访问口令；提问时将调用云端 Agent' : '请输入访问口令后提问；无口令不会调用模型');
+          }}
+        />
       </section>
 
       <section className="chat-list" aria-live="polite">

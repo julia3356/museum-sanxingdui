@@ -5,6 +5,7 @@ import { getSegment, resolveTheme } from './paths';
 export type AskContext = {
   segmentId?: number;
   question: string;
+  accessToken?: string;
 };
 
 export type AskResult = {
@@ -128,7 +129,7 @@ function localAnswer(question: string, segment?: Segment): string {
   return segment ? localSegmentAnswer(question, segment) : localGeneralAnswer(question);
 }
 
-export async function askGuide({ question, segmentId }: AskContext): Promise<AskResult> {
+export async function askGuide({ question, segmentId, accessToken }: AskContext): Promise<AskResult> {
   const segment = segmentId ? getSegment(segmentId) : undefined;
   const payload = {
     action: 'ask',
@@ -145,7 +146,13 @@ export async function askGuide({ question, segmentId }: AskContext): Promise<Ask
   };
 
   try {
-    const response = await apiClient.post('/museum/ask-guide', payload);
+    const response = await apiClient.post('/museum/ask-guide', payload, {
+      headers: accessToken
+        ? {
+            'X-Museum-Agent-Token': accessToken,
+          }
+        : undefined,
+    });
     const data = response.data?.data || response.data;
     if (data?.answer) {
       return {
@@ -159,6 +166,19 @@ export async function askGuide({ question, segmentId }: AskContext): Promise<Ask
       };
     }
   } catch (error) {
+    const status =
+      error && typeof error === 'object' && 'response' in error
+        ? (error as { response?: { status?: number } }).response?.status
+        : undefined;
+    if (status === 401) {
+      return {
+        answer: '访问口令不正确或尚未填写。请在本页输入正确口令后再提问。',
+        quotaText: '未调用模型：访问口令校验失败',
+        fromFallback: true,
+        sourceLabel: '未授权',
+      };
+    }
+
     const reason =
       error && typeof error === 'object' && 'message' in error
         ? String((error as { message?: string }).message || '请求失败')

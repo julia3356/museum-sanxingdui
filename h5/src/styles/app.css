@@ -454,6 +454,39 @@ p {
   cursor: pointer;
 }
 
+.access-panel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  margin: 12px 0 18px;
+  padding: 12px;
+  border: 1px solid rgba(216, 173, 90, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.access-panel label {
+  color: #d8ad5a;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.access-panel input {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid rgba(216, 173, 90, 0.2);
+  border-radius: 8px;
+  padding: 0 12px;
+  color: #fff6df;
+  background: rgba(255, 255, 255, 0.06);
+  font: inherit;
+}
+
+.access-panel input::placeholder {
+  color: #8d8374;
+}
+
 .chat-list {
   display: grid;
   gap: 14px;
@@ -597,6 +630,10 @@ p {
 
   .ask-button {
     width: 100%;
+  }
+
+  .access-panel {
+    grid-template-columns: 1fr;
   }
 }
 

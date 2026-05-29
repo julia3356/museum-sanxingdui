@@ -43,6 +43,7 @@ function loadEnv(filePath) {
 loadEnv(envPath);
 
 const content = JSON.parse(fs.readFileSync(contentPath, 'utf8'));
+const requiredAccessToken = safeText(process.env.MUSEUM_AGENT_API_TOKEN, 4096);
 
 const DEFAULT_CONFIG = {
   enabled: true,
@@ -102,6 +103,37 @@ function safeText(value, limit) {
     .replace(/\s+/g, ' ')
     .trim()
     .slice(0, limit);
+}
+
+function getRequestToken(req) {
+  const headerToken = safeText(req.headers['x-museum-agent-token'], 4096);
+  if (headerToken) {
+    return headerToken;
+  }
+
+  const authorization = safeText(req.headers.authorization, 4096);
+  const match = authorization.match(/^Bearer\s+(.+)$/i);
+  return match ? safeText(match[1], 4096) : '';
+}
+
+function timingSafeEqualText(left, right) {
+  if (!left || !right || left.length !== right.length) {
+    return false;
+  }
+
+  let diff = 0;
+  for (let index = 0; index < left.length; index += 1) {
+    diff |= left.charCodeAt(index) ^ right.charCodeAt(index);
+  }
+  return diff === 0;
+}
+
+function isAuthorized(req) {
+  if (!requiredAccessToken) {
+    return true;
+  }
+
+  return timingSafeEqualText(getRequestToken(req), requiredAccessToken);
 }
 
 function jsonText(value, limit) {
@@ -402,7 +434,7 @@ function sendJson(res, statusCode, body) {
   res.writeHead(statusCode, {
     'Content-Type': 'application/json; charset=utf-8',
     'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Museum-Agent-Token',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
   });
   res.end(JSON.stringify(body));
@@ -416,6 +448,11 @@ const server = http.createServer(async (req, res) => {
 
   if (req.method !== 'POST' || req.url !== '/api/v1/museum/ask-guide') {
     sendJson(res, 404, { code: 404, message: 'Not found' });
+    return;
+  }
+
+  if (!isAuthorized(req)) {
+    sendJson(res, 401, { code: 401, message: 'Unauthorized' });
     return;
   }
 
@@ -439,4 +476,5 @@ server.listen(port, '127.0.0.1', () => {
   console.log(`[local-ask-guide] listening on http://127.0.0.1:${port}/api/v1/museum/ask-guide`);
   console.log(`[local-ask-guide] env file: ${envPath}`);
   console.log(`[local-ask-guide] content: ${content.guide.exhibition}`);
+  console.log(`[local-ask-guide] access token: ${requiredAccessToken ? 'enabled' : 'disabled'}`);
 });
