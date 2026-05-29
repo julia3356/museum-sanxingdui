@@ -1,0 +1,29 @@
+{
+  "name": "museum-tool-h5",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5175 --strictPort",
+    "sync:content": "node scripts/sync-release-content.mjs",
+    "build": "npm run sync:content && tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5175 --strictPort",
+    "local-api": "node server/local-ask-guide.mjs",
+    "h5:start": "scripts/start.sh",
+    "h5:stop": "scripts/stop.sh",
+    "h5:restart": "scripts/restart.sh",
+    "h5:status": "scripts/status.sh"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "axios": "^1.7.9",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4"
+  }
+}

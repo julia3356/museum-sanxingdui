@@ -1,0 +1,79 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Runtime / logs
+.runtime/
+*.log
+*.pid
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python / local tooling
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local agent memory / scratch
+.workbuddy/
+
+# Build outputs and caches
+dist/
+out/
+tmp/
+coverage/
+*.tsbuildinfo
+.vite/
+.vite-temp/
+.cache/
+
+# H5 local generated output
+h5/dist/
+h5/.runtime/
+h5/node_modules/
+h5/src/data/release-content.json
+
+# Remotion / media render outputs
+out/
+public/narration.*
+media/**/*.mp4
+media/**/*.mov
+media/**/*.m4v
+media/**/*.wav
+media/**/*.mp3
+media/**/*.aiff
+media/**/*.m4a
+public/**/*.mp4
+public/**/*.mov
+public/**/*.m4v
+public/**/*.wav
+public/**/*.mp3
+public/**/*.aiff
+public/**/*.m4a
+public/wechat-bavul-assets/article*.html
+media/**/*.mhtml
+media/**/frames/
+media/**/frames-*/
+media/**/contact-sheets/
+
+# WeChat developer local/private files and generated backups
+project.private.config.json
+**/project.private.config.json
+**/*.backup-*
+**/*.backup
+
+# Release compression artifacts generated locally
+release/compress/compressed/
+release/compress/thumbs/
+release/compress/*.log
+release/compress/*log.txt
