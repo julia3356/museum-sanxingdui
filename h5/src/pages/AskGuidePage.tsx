@@ -119,23 +119,6 @@ export function AskGuidePage({ segmentId }: { segmentId?: number }) {
         ))}
       </section>
 
-      <section className="access-panel" aria-label="访问口令">
-        <label htmlFor="agent-token">访问口令</label>
-        <input
-          id="agent-token"
-          type="password"
-          value={accessToken}
-          placeholder="输入口令后再提问"
-          autoComplete="off"
-          onChange={(event) => {
-            const value = event.target.value;
-            setAccessToken(value);
-            writeStoredToken(value.trim());
-            setQuotaText(value.trim() ? '已填写访问口令；提问时将调用云端 Agent' : '请输入访问口令后提问；无口令不会调用模型');
-          }}
-        />
-      </section>
-
       <section className="chat-list" aria-live="polite">
         {messages.map((message) => (
           <article className={`message ${message.role}`} key={message.id}>
@@ -155,16 +138,34 @@ export function AskGuidePage({ segmentId }: { segmentId?: number }) {
       </section>
 
       <form className="ask-box" onSubmit={submit}>
-        <textarea
-          className="question-input"
-          maxLength={120}
-          placeholder="问一个和当前展品有关的问题，最多 120 字"
-          value={question}
-          onChange={(event) => setQuestion(event.target.value)}
-        />
-        <button className="button primary ask-button" disabled={loading} type="submit">
-          提问
-        </button>
+        <div className="access-panel compact-access" aria-label="访问口令">
+          <label htmlFor="agent-token">访问口令</label>
+          <input
+            id="agent-token"
+            type="password"
+            value={accessToken}
+            placeholder="输入口令后再提问"
+            autoComplete="off"
+            onChange={(event) => {
+              const value = event.target.value;
+              setAccessToken(value);
+              writeStoredToken(value.trim());
+              setQuotaText(value.trim() ? '已填写访问口令；提问时将调用云端 Agent' : '请输入访问口令后提问；无口令不会调用模型');
+            }}
+          />
+        </div>
+        <div className="ask-input-row">
+          <textarea
+            className="question-input"
+            maxLength={120}
+            placeholder="问一个和当前展品有关的问题，最多 120 字"
+            value={question}
+            onChange={(event) => setQuestion(event.target.value)}
+          />
+          <button className="button primary ask-button" disabled={loading} type="submit">
+            提问
+          </button>
+        </div>
       </form>
 
       <section className="section legal-note">

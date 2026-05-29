@@ -428,7 +428,7 @@ p {
 }
 
 .ask-page {
-  padding-bottom: 210px;
+  padding-bottom: 260px;
 }
 
 .ask-hero {
@@ -464,6 +464,11 @@ p {
   border: 1px solid rgba(216, 173, 90, 0.18);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.04);
+}
+
+.compact-access {
+  margin: 0;
+  padding: 10px;
 }
 
 .access-panel label {
@@ -549,7 +554,7 @@ p {
   left: 0;
   z-index: 21;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: 1fr;
   gap: 10px;
   max-width: 980px;
   margin: 0 auto;
@@ -557,6 +562,12 @@ p {
   border-top: 1px solid rgba(216, 173, 90, 0.14);
   background: rgba(10, 14, 13, 0.94);
   backdrop-filter: blur(14px);
+}
+
+.ask-input-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
 }
 
 .question-input {
@@ -625,6 +636,10 @@ p {
   }
 
   .ask-box {
+    grid-template-columns: 1fr;
+  }
+
+  .ask-input-row {
     grid-template-columns: 1fr;
   }
 
