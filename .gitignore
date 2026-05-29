@@ -41,7 +41,6 @@ coverage/
 h5/dist/
 h5/.runtime/
 h5/node_modules/
-h5/src/data/release-content.json
 
 # Remotion / media render outputs
 out/

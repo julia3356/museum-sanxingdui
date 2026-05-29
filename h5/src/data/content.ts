@@ -1,4 +1,5 @@
-// Generated from ../release/wechat-miniprogram/data/content.js by scripts/sync-release-content.mjs.
+// Bundled H5 content snapshot. In the full sanxingdui-guide repo it can be
+// refreshed from ../release/wechat-miniprogram/data/content.js by npm run sync:content.
 import releaseContent from './release-content.json';
 
 export type GuideTheme = {
