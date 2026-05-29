@@ -13,7 +13,6 @@ export default defineConfig({
       '.butterfly-gen.com',
       'localhost',
       '127.0.0.1',
-      '8.153.105.107',
     ],
     proxy: {
       '/api': {
