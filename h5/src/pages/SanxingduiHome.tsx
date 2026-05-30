@@ -1,4 +1,5 @@
 import { content } from '../data/content';
+import { getThumbnailUrl } from '../lib/paths';
 import { LinkButton, PageHeader, BottomNav } from './shared';
 
 export function SanxingduiHome() {
@@ -25,6 +26,11 @@ export function SanxingduiHome() {
 
       <section className="section">
         <div className="section-title">主题线索</div>
+        <div className="topic-preview" aria-hidden="true">
+          {content.browseIndex.slice(0, 4).map((segment) => (
+            <img src={getThumbnailUrl(segment.thumbnail)} alt="" key={segment.id} loading="lazy" />
+          ))}
+        </div>
         <div className="theme-grid">
           {content.guide.prologueThemes.map((theme) => (
             <article className="panel" key={theme.title}>

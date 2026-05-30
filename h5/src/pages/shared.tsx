@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { navigate, withBase } from '../lib/paths';
+import { getAppPath, navigate, withBase } from '../lib/paths';
 
 type LinkButtonProps = {
   to: string;
@@ -44,20 +44,25 @@ export function PageHeader({
 }
 
 export function BottomNav() {
+  const path = getAppPath();
+  const links = [
+    { to: '/sanxingdui/', label: '导引', match: path === '/sanxingdui' || path === '/sanxingdui/' },
+    { to: '/sanxingdui/segments', label: '展品', match: path.startsWith('/sanxingdui/segments') },
+    { to: '/sanxingdui/ask', label: '问答', match: path.startsWith('/sanxingdui/ask') },
+    { to: '/sanxingdui/sources', label: '来源', match: path === '/sanxingdui/sources' },
+  ];
+
   return (
     <nav className="bottom-nav" aria-label="三星堆看展导航">
-      <LinkButton to="/sanxingdui/" className="nav-link">
-        导引
-      </LinkButton>
-      <LinkButton to="/sanxingdui/segments" className="nav-link">
-        展品
-      </LinkButton>
-      <LinkButton to="/sanxingdui/ask" className="nav-link">
-        问答
-      </LinkButton>
-      <LinkButton to="/sanxingdui/sources" className="nav-link">
-        来源
-      </LinkButton>
+      {links.map((link) => (
+        <LinkButton
+          to={link.to}
+          className={link.match ? 'nav-link active' : 'nav-link'}
+          key={link.to}
+        >
+          {link.label}
+        </LinkButton>
+      ))}
     </nav>
   );
 }
